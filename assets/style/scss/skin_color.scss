@@ -1,0 +1,1560 @@
+/*
+Template Name: CrmX Admin - Responsive Admin Template
+Author: Multipurpose Themes
+File: scss
+*/
+
+@import 'variable'; 
+@import 'mixin'; 
+@import 'responsive';
+
+/*---light skin---*/
+ 
+.light-skin{
+    .main-header{
+        li{
+            &.user-header{
+                background-color: $white;
+            } 
+        }
+        .navbar{
+            .sidebar-toggle{
+                color: $white; 
+            }
+            .res-only-view{
+                color: $white;
+            }
+            .nav{
+                >li{
+                    >a{
+                        color: $white;
+                        @include hover-state{
+                            background-color: rgba($black, 0.05);
+                        }
+                    }
+                }
+                .open{
+                    > a{
+                        background-color: rgba($black, 0.05);
+                        @include hover-focus-state{
+                            background-color: rgba($black, 0.05);
+                        }
+                    }
+                }
+                >.active{
+                    >a{
+                       background-color: rgba($black, 0.05); 
+                    }
+                }
+            }
+        }
+    }
+    .main-sidebar{
+        box-shadow: 0 10px 15px -5px rgba(lighten($black, 50%), .07);
+        background-color: rgba($white, 0.95); 
+    }
+    .user-panel{
+        >.info{
+          color: $white;  
+            >a{
+                color: $white;
+            }
+        }
+    }
+    .sidebar-menu{
+        >li{
+            @include hover-active-state{
+                >a{
+                   color: $dark; 
+                }
+            }
+            &.menu-open{
+                >a{
+                   color: $dark;  
+                }
+            }
+            >.treeview-menu{
+                margin: 0 0px;
+            }
+        } 
+    }
+    &.sidebar-collapse{
+        .sidebar-menu{
+            >li{
+                >.treeview-menu{
+                    background-color: rgba($white,0.95);
+                }
+            }
+        } 
+    }
+    &.sidebar-mini{
+        &.sidebar-collapse{
+            .sidebar-menu{
+                >li{
+                    >a{
+                        >span{
+                            background-color: rgba($white,0.95) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sidebar{
+        a{
+          color: $dark;  
+            &:hover{
+               text-decoration: none; 
+            }
+        }
+    }
+    .sidebar-form{
+        border-radius: 3px;
+        border: 1px solid lighten($black, 50%); 
+        input[type="text"]{
+            box-shadow: none;
+            background-color: rgba($black, 0.59);
+            border: 1px solid rgba($black, 0.59);
+            height: 35px;
+            color: $white;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 2px;
+            &:focus{
+               color: $white; 
+                + .input-group-btn{
+                    .btn{
+                       color: $white; 
+                    }
+                }
+            }
+        }
+        .btn{
+            box-shadow: none;
+            background-color: rgba($black, 0.59);
+            border: 1px solid rgba($black, 0.59);
+            height: 35px;
+            color: $light;
+            border-top-left-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 0;
+        }
+    }
+    .control-sidebar{
+        color: $dark;
+        background-color: $white;
+        +.control-sidebar-bg{
+            -webkit-box-shadow: 0px 5px 10px 1px rgba(lighten($black, 30%), 0.2);
+            -moz-box-shadow: 0px 5px 10px 1px rgba(lighten($black, 30%), 0.2);
+            box-shadow: 0px 5px 10px 1px rgba(lighten($black, 30%), 0.2); 
+        }
+        .nav-tabs{
+            &.control-sidebar-tabs{
+                border-bottom: 1px solid lighten($black, 80%);
+                >li{
+                    >a{
+                       color: $dark;
+                        border-bottom-color: lighten($black, 80%);
+                        @include hover-state{
+                            border-bottom-color: lighten($black, 80%);
+                            background-color: transparent;
+                            
+                        }
+                        &.active{
+                            background-color: transparent;
+                            @include hover-state{
+                              background-color: transparent;  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .control-sidebar-heading{
+            color: $dark;
+        }
+        .control-sidebar-subheading{
+            color: $dark;
+        }
+        .control-sidebar-menu{
+            margin-left: -14px;
+            >li{
+                >a{
+                    &:hover{
+                       background-color: $light; 
+                    }
+                    .menu-info{
+                        >p{
+                           color: lighten($black, 40%); 
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+.control-sidebar+.control-sidebar-bg{
+    background-color: $white;
+}
+
+@include screen-sm-max{
+    .light-skin{
+        &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li{
+                        >a{
+                            >span{
+                                background-color: rgba($white,0) !important;
+                            }
+                        }
+                        &.menu-open{
+                            >a{
+                                background-color: rgba($white,0.95) !important;
+                            }
+                        }
+                        &.active{
+                            >a{
+                               background-color: rgba($white,0.95) !important; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alert-primary, .alert-danger, .alert-error, .alert-info, .alert-success, .alert-warning, .bg-black, .bg-black-active, .callout.callout-danger, .callout.callout-info, .callout.callout-success, .callout.callout-warning, .callout.callout-primary, .label-danger, .label-info, .label-primary, .label-success, .label-warning, .modal-danger .modal-body, .modal-danger .modal-footer, .modal-danger .modal-header, .modal-info .modal-body, .modal-info .modal-footer, .modal-info .modal-header, .modal-primary .modal-body, .modal-primary .modal-footer, .modal-primary .modal-header, .modal-success .modal-body, .modal-success .modal-footer, .modal-success .modal-header, .modal-warning .modal-body, .modal-warning .modal-footer, .modal-warning .modal-header, .bg-warning, .bg-gray, .modal-primary .modal-header *, .modal-info .modal-header *, .modal-success .modal-header *, .modal-danger .modal-header *, .modal-warning .modal-header *{
+    color: $white;
+}
+
+
+
+
+/*---Dark skin---*/
+
+body{
+    &.dark-skin{
+        background-color: lighten($black, 20%);
+	    color: rgba($white, 0.80);        
+        .navbar-nav{
+            >.user-menu{
+                >.dropdown-menu{
+                    >.user-body{
+                        border-color: rgba($white, 0.12);
+                    }
+                } 
+            }
+            >.dropdown {
+                >.dropdown-menu{
+                    >li{
+                        .menu{
+                            >li{
+                                >a{
+                                    border-color: rgba($white, 0.12);
+                                    color: rgba($white, 0.7);
+                                    >div{
+                                        >h4{
+                                            color: rgba($white, 0.7);
+                                            >small{
+                                               color: rgba($white, 0.7); 
+                                            }
+                                        }
+                                        >span{
+                                            color: rgba($white, 0.7); 
+                                        }
+                                    }                                
+                                    >h3{
+                                        color: rgba($white, 0.7);
+                                    }
+                                    &:hover{
+                                        background-color: rgba($black, 0.2);
+                                    }
+                                }
+                            }
+                        } 
+                        &.header{
+                            border-color: rgba($white, 0.12) ;
+                            border-bottom: 1px solid rgba($white, 0.12);
+                            color: $white;
+                            background-color: lighten($black, 25%);
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+.dark-skin{
+    h1, h2, h3, h4, h5, h6{
+        color: $white; 
+    }
+    a{
+        color: rgba($white,0.7); 
+        &.bg-light{
+            @include hover-focus-state{
+                background-color: lighten($black, 30%) !important;
+            }
+        }
+    }
+    .form-control{
+        background-color: lighten($black, 25%);
+	    color: $white; 
+    }
+    .search-box{
+        .app-search{
+            .srh-btn{
+                background-color: lighten($black, 25%);
+            }
+        } 
+    }
+    .dropdown-menu{
+        background-color: lighten($black, 25%);
+        border-color: rgba($white, 0.12);
+        >li{
+            >a{
+               color: rgba($white, 0.7); 
+            }
+        }
+    }
+    .dropdown-grid{
+        border-color: rgba($white, 0.12);
+        .dropdown-item{
+            &:hover{
+                border-color: lighten($black, 30%);
+            }
+        }
+    }
+    .dropdown-divider{
+        border-color: rgba($white, 0.12);
+    }
+    .dropdown-item{
+        @include hover-focus-state{
+            background-color: lighten($black, 10%);
+            color: lighten($black, 80%);
+        }
+    }
+    .content-header{
+        .page-title{
+           color: $white;
+	       border-color: lighten($black, 50%); 
+        } 
+        .right-title{
+            .dropdown{
+                >.btn{
+                    border-color: rgba($white, 0.12)!important;
+                    background-color: lighten($black, 25%);
+                }
+            } 
+        }
+    }
+    .subheader_daterange{
+        background-color: lighten($black, 25%);
+    }
+    .ranges{
+        li{
+            background-color: rgba($black, 0.2);
+            border-color: rgba($white, 0.12);
+            color: rgba($white, 0.7); 
+        }
+    }
+    .btn-default{
+        background-color: lighten($black, 45%);
+        color: $light;
+        border-color: rgba($white, 0.12);
+        &.hover{
+            background-color: lighten($black, 25%);
+            border-color: lighten($black, 25%); 
+        }
+        @include hover-active-state{
+            background-color: lighten($black, 25%);
+            border-color: lighten($black, 25%);
+        }
+    }
+    .btn{
+        &.btn-outline{
+            color: $light;
+            border-color: rgba($white, 0.12);
+            &:hover{
+                color: $white;
+                background-color: rgba($black,0.2);
+            }
+            &.btn-white {
+                color: $white !important;
+                border-color: $white !important;
+            }
+            &.btn-dark {
+                color: lighten($dark, 60%) !important;
+                background-color: transparent;
+                border-color: $dark;
+            }
+        }
+    }
+    .btn-toggle{
+        @include before-after-state{
+            color: rgba($white, 0.7);
+        }
+    }    
+    button{
+        &.bg-light{
+            @include hover-focus-state{
+                background-color: lighten($black, 30%) !important;
+            }
+        }
+    }    
+    .btn-light{        
+        background-color: lighten($black, 15%);
+        border-color: rgba($white, 0.12);
+        color: lighten($black, 70%);
+    }
+    .box{
+        background-color: lighten($black, 25%);
+        .box-header{
+            color: $white;
+            border-color: rgba($white, 0.12);
+            .box-subtitle{
+                color: rgba($white, 0.7);
+            }
+        }
+        .box-footer{
+            background-color: lighten($black, 25%);
+            border-color: rgba($white, 0.12);
+        }
+        .box-transparent{
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        &[class*=bg-pale]{
+            >.box-header{
+                color: $dark;
+            }
+        }
+        &.box-solid{
+            .box-body{
+                background-color: lighten($black, 25%) !important;
+                color: rgba($white, 0.7);
+            }
+            &.box-default{
+                >.box-header{
+                    color: $dark;
+                    background-color: $light;
+                    .btn{
+                        color: $dark;
+                    }
+                    a{
+                        color: $dark;
+                    }
+                    >.box-tools{
+                        .btn{
+                            border: 0;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+        .border-right {
+            border-right: 1px solid $light;
+        }
+        .border-left{
+            border-left: 1px solid $light;
+        }
+        .overlay{
+           background: rgba($white, .7);
+        }
+        .flex-column{
+            >li {
+                border-color: rgba($white, 0.12);
+            }
+        }
+        .knob-label {
+            color: lighten($black, 45%);
+        }        
+    }
+    .box-inverse{
+        color: $white !important;
+        background-color: lighten($black, 30%);
+        .box-header{
+            color: $white !important;
+            border-color: rgba($white, 0.15);
+        }
+        .box-title{
+            color: $white !important;
+        }
+        h1, h2, h3, h4, h5, h6, small{
+            color: rgba($white, 0.8) !important;
+        }
+        .box-controls{
+            li{
+                >a{
+                    color: rgba($white, 0.8) !important;
+                }
+            }
+        }
+        .box-footer{
+            border-color: rgba($white, 0.5);
+        }
+        .box-action{
+            border-color: rgba($white, 0.5);
+        }
+        .box-btn-more{
+            @include before-after-state{
+                border-color: $white;
+            }
+        }
+    }    
+    .box-gray{
+        background-color: lighten($black, 50%);
+        &.box-bordered{
+            border-color: lighten($black, 50%);
+        }
+    }
+    .box-dark{
+        background-color: $dark;
+        .box-bordered {
+            border-color: $dark;
+        }
+    }
+    .box-bordered {
+        border-color: rgba($white, 0.12);
+    }
+    .box-profile{
+        &.nav-tabs-custom{
+            >.nav-tabs{
+                background-color: lighten($black, 30%);
+                >li{
+                    >a.active{                       
+                        color: rgba($white, 0.7);
+                        &:hover{
+                            color: rgba($white, 0.7);
+                        }
+                    }
+                }
+            }
+        }
+    }    
+    .box-comments{
+        .username{
+            color: $white;
+            .comment-text{
+                color: lighten($black, 65%);;
+            }
+        }
+        .box-comment {
+            border-color: rgba($white, 0.12);
+        }
+    }
+    .card{
+        background-color: lighten($black, 25%);
+        .card-header{
+            background-color: transparent !important;
+            border-color: rgba($white, 0.12);
+        }
+        .card-footer{
+            background-color: transparent !important;
+            border-color: rgba($white, 0.12);
+        }
+    }
+    .left-block{
+        border-color: rgba($white, 0.12) !important;
+        background-color: rgba(lighten($black, 15%), 0.5);
+        .left-content-area{
+            >.box{
+               background-color: lighten($black, 15%); 
+            }
+            >.card{
+               background-color: lighten($black, 15%); 
+            }
+        }
+    }
+    .todo-list{
+        >li{
+            color: lighten($black, 75%);
+        }
+    }
+    .btn-box-tool{
+        &:hover{
+           color: rgba($white, 0.7); 
+        }
+    }
+    .show{
+        .btn-box-tool{
+            color: rgba($white, 0.7);
+        }        
+    }
+    .page-header{
+        border-color: rgba($white, 0.12);
+    }
+    .overlay-wrapper{
+        .overlay{
+            background: rgba($white, .7); 
+        }
+    }
+    .info-box{
+        background-color: lighten($black, 25%);
+    }
+    .badge-default{
+        color: $dark;
+        background-color: lighten($black, 55%);
+    }
+    code{
+        border-color: rgba($white, 0.12);
+        background-color: $black; 
+    }
+    .code-preview {
+        border-color: rgba($white, 0.12);
+        background-color: $black; 
+    }
+    .table{
+        color: rgba($white, 0.7);
+        >thead{
+            >tr{
+                >th{
+                   border-color: rgba($white, 0.12); 
+                } 
+                >td{
+                   border-color: rgba($white, 0.12); 
+                }
+            }
+        }
+        >tbody{
+            >tr{
+                >td{
+                   border-color: rgba($white, 0.12); 
+                }
+                >th{
+                   border-color: rgba($white, 0.12);  
+                }
+            }
+        }
+        >tfoot{
+            >tr{
+                >td{
+                   border-color: rgba($white, 0.12); 
+                } 
+                >th{
+                   border-color: rgba($white, 0.12); 
+                }
+            } 
+        }
+    }
+    .table-bordered{
+        border-color: rgba($white, 0.12);
+        >tbody{
+            >tr{
+                >td{
+                   border-color: rgba($white, 0.12); 
+                } 
+                >th{
+                   border-color: rgba($white, 0.12); 
+                }
+            }
+        }
+        >tfoot{
+            >tr{
+                >td{
+                   border-color: rgba($white, 0.12); 
+                } 
+                >th{
+                   border-color: rgba($white, 0.12); 
+                }
+            }
+        }
+        >thead{
+            >tr{
+                >td{
+                   border-color: rgba($white, 0.12); 
+                } 
+                >th{
+                   border-color: rgba($white, 0.12); 
+                }
+            }
+        }
+    }
+    .table-active{
+        background-color: lighten($black, 20%);
+        >th{
+           background-color: lighten($black, 20%); 
+        }
+        >td{
+           background-color: lighten($black, 20%); 
+        }
+    }    
+    .table-separated{
+        tbody{
+            tr{
+                background-color: $dark;
+            }
+        }
+    }
+    .dataTable{
+        input{            
+            border-color: rgba($white, 0.12);
+            color: lighten($black, 45%);
+            background-color: lighten($black, 15%);
+        }
+        select{
+            border-color: rgba($white, 0.12);
+            color: lighten($black, 45%);
+            background-color: lighten($black, 15%);
+        }
+    }
+    .page-item{
+        &.disabled{
+            .page-link{
+                color: rgba($white, 0.7);
+                background-color: $dark;
+                border-color: rgba($white, 0.12);
+            }
+        }
+    }
+    .pagination{
+        >li{
+            >a{
+               background-color: $dark; 
+               color: rgba($white, 0.7);
+            }
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+               background-color: transparent; 
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                    color: lighten($dark, 25%);
+                }
+            }
+        }
+    }
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                >a{
+                    &.active{                        
+                        background-color: lighten($dark, 15%);
+                        color: rgba($white, 0.7);                        
+                        border-left-color: rgba($white, 0.12);
+                        border-right-color: rgba($white, 0.12);
+                        &:hover{                               
+                            background-color: lighten($dark, 15%);
+                            color: rgba($white, 0.7);
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    .media-list-hover{
+        >.media:not(.media-list-header):not(.media-list-footer) {
+            &:hover{
+                background-color: rgba($black, 0.2);
+            }
+        }
+        .media-list-body{
+            >.media{
+                &:hover{
+                    background-color: rgba($black, 0.2);
+                }
+            }
+        }
+    }
+    .media{
+        a:not(.btn):not(.avatar){            
+            color: lighten($black, 75%);
+        } 
+    }
+    .modal-content{
+        background-color: lighten($black, 30%);
+    }
+    .modal-header{
+        border-color: rgba($white, 0.12);
+    }
+    .modal-footer{
+        border-color: rgba($white, 0.12);
+    }
+    .media-body{
+        >p:last-child{
+           color: rgba($white, 0.7); 
+        }
+    }    
+    .modal-fill{
+        .modal-content{
+            background-color: $dark;
+        }
+    }
+    .modal{
+        &.modal-fill {
+            background-color: $dark;
+        }
+    }
+    .media-list-divided {
+        >.media:not(.media-list-header):not(.media-list-footer){
+            border-bottom-color: rgba($white, 0.2);
+        }
+        .media-list-body {
+            >.media{                
+                border-bottom-color: rgba($white, 0.2);
+            }
+        }
+    }
+    .close {
+        color: lighten($black, 60%);
+        text-shadow: none;
+    }
+    .flex-column{
+        >li{
+            >a{
+                color: lighten($black, 60%);
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{
+                    @include hover-focus-state{
+                        background-color: rgba($black, 0.2);
+                    }
+                    &.active{
+                        @include hover-focus-state{
+                            background-color: rgba($black, 0.2);
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    .mailbox-messages{
+        table{
+            a{
+                color: rgba($white, 0.7);
+            }
+        } 
+        .mailbox-date{
+            font-size: 12px;
+            color: rgba($white, 0.7);
+        }
+    }
+    .mailbox-controls{
+        &.with-border{
+            border-color: rgba($white, 0.12);
+        }
+    }
+    .mailbox-read-info{
+        border-color: rgba($white, 0.12);
+    }
+    .mailbox-read-time {
+        color: rgba($white, 0.7);
+    }
+    .mailbox-attachment-info{
+        background-color: lighten($black, 15%);
+    }
+    .mailbox-attachments{
+        li{
+           border-color: rgba($white, 0.12); 
+        }
+    }
+    .callout{
+        .highlight{
+            background-color: lighten($black, 30%);
+        } 
+    }
+    .callout code{
+        background-color: lighten($black, 30%);
+    }
+    .wysihtml5-toolbar{
+        .btn-default{
+            background-color: lighten($black, 30%);
+        }
+    }
+    .wysihtml5-sandbox{
+	    background-color: lighten($black, 15%) !important;
+	    border-color: rgba($white, 0.12) !important;
+        body.placeholder{
+	       background-color: lighten($black, 15%) !important;
+	       border-color: rgba($white, 0.12) !important;
+        }
+    }
+    .lookup::before{
+        color: rgba($white, 0.4);
+    }    
+    .lookup{
+        input {
+            color: rgba($white, 0.7);
+        }
+    }
+    .form-control {
+        border-color: rgba($white, 0.12);
+    }
+    .form-element{
+        .form-control{
+            color: rgba($white, 0.7);
+            background-image: -webkit-gradient(linear, left top, left bottom, from($warning), to($warning)), -webkit-gradient(linear, left top, left bottom, from(rgba($white, 0.12)), to(rgba($white, 0.12)));
+            background-image: -webkit-linear-gradient($warning , $warning), -webkit-linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+            background-image: -o-linear-gradient($warning , $warning), -o-linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+            background-image: linear-gradient($warning , $warning), linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+            &:focus{
+                background-image: -webkit-gradient(linear, left top, left bottom, from($warning), to($warning)), -webkit-gradient(linear, left top, left bottom, from(rgba($white, 0.12)), to(rgba($white, 0.12)));
+                background-image: -webkit-linear-gradient($warning , $warning), -webkit-linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+                background-image: -o-linear-gradient($warning , $warning), -o-linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+                background-image: linear-gradient($warning , $warning), linear-gradient(rgba($white, 0.12), rgba($white, 0.12));
+            }
+        }
+        .form-control{
+        }
+    }
+    .input-group{
+        .input-group-addon{
+            border-color: rgba($white, 0.12);
+            color: rgba($white, 0.5);
+            background-color: lighten($black, 15%);
+        }
+    }
+    .input-group-text{
+            border-color: rgba($white, 0.12);
+            color: rgba($white, 0.5);
+            background-color: lighten($black, 15%);
+    }
+    .direct-chat-text{
+        p {
+            background: lighten($black, 15%);    
+            color: lighten($black, 75%);
+        }
+    }
+    .direct-chat-timestamp{
+        color: lighten($black, 55%);
+    }
+    time{
+        color: rgba($white, 0.7);
+    }
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{                        
+                        background-color: lighten($black, 15%);
+                        border-color: rgba($white, 0.12);
+                    } 
+                }
+            }
+        }
+    }
+    ul{
+        .list-style-none{
+            li{
+                a{                    
+                    color: lighten($black, 75%);
+                }
+            }
+        }  
+    }
+    .divider-dash{
+        color: lighten($black, 75%);
+    }    
+    .divider{
+        @include before-after-state{
+            border-top: 1px solid lighten($black, 30%);;
+        }
+    }
+    .fc-toolbar{
+        .fc-center{
+            color: rgba($white, 0.7);
+        }
+    }
+    .fc-button{
+        background-color: lighten($black, 15%);
+        border-color: rgba($white, 0.12);
+        color: rgba($white, 0.7);
+        text-shadow: none;
+    }
+    .fc{
+        th{
+            &[class*=fc-]{
+               background-color: lighten($black, 15%); 
+            }
+            &.fc-widget-header{
+                color: rgba($white, 0.7);
+            }
+        } 
+    }
+    .fc-unthemed{
+        .fc-content{
+            border-color: rgba($white, 0.12);
+        }
+        .fc-divider{
+            border-color: rgba($white, 0.12);
+        }
+        .fc-list-heading{
+            td{
+                border-color: rgba($white, 0.12);
+            }
+        }
+        .fc-list-view{
+            border-color: rgba($white, 0.12);
+        }
+        .fc-popover{
+            border-color: rgba($white, 0.12);
+        }
+        .fc-row{
+            border-color: rgba($white, 0.12);
+        }
+        tbody{
+            border-color: rgba($white, 0.12);
+        }
+        td{
+            border-color: rgba($white, 0.12);
+        }
+        th{
+            border-color: rgba($white, 0.12);
+        }
+        thead{
+            border-color: rgba($white, 0.12);
+        }
+        .fc-today {
+            border-color: rgba($white, 0.12);
+            background-color: lighten($black, 15%)!important;
+        }
+    }
+    .fc-day{
+        background-color: lighten($black, 30%);
+    }
+    .publisher-multi{
+        .publisher-input{
+            color: $white;
+        }
+    }
+    .user-block{
+        .description {
+            color: rgba($white, 0.7);
+        }
+    }
+    .post{
+        border-bottom-color: rgba($white, 0.12);
+        color: rgba($white, 0.7);  
+    }
+    .blockquote{
+        color: rgba($white, 0.7);
+        footer{
+           color: rgba($white, 0.7); 
+        }
+    }
+    .progress{
+        background-color: lighten($black, 15%);
+    }
+    .ribbon-wrapper{
+        background-color: lighten($black, 15%);
+    }
+    .ribbon-wrapper-reverse{
+        background-color: lighten($black, 15%);
+    }
+    .ribbon-wrapper-bottom{
+        background-color: lighten($black, 15%);
+    }
+    .ribbon-wrapper-right-bottom{
+        background-color: lighten($black, 15%);
+    }
+    .flexslider{
+        background: lighten($black, 30%);
+        border-color: transparent;
+    }
+    .slider-track{        
+        background-color: lighten($black, 15%);
+        background-image: -moz-linear-gradient(top, lighten($black, 15%), lighten($black, 15%));
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(lighten($black, 15%)), to(lighten($black, 15%)));
+        background-image: -webkit-linear-gradient(top, lighten($black, 15%), lighten($black, 15%));
+        background-image: -o-linear-gradient(top, lighten($black, 15%), lighten($black, 15%));
+        background-image: linear-gradient(to bottom, lighten($black, 15%), lighten($black, 15%));
+    }
+    .vtabs{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    color: $white ;
+                } 
+            }
+        }
+    }
+    .tabcontent-border{
+        border-color: rgba($white, 0.12);
+    }
+    .nav-tabs {
+        border-color: rgba($white, 0.12);
+        .nav-link {
+            border-color: rgba($white, 0.12);
+            color: rgba($white, 0.7);
+            &.active{
+                color: $white !important;
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{
+               color: rgba($white, 0.7); 
+                &.active{
+                    color: $white !important;
+                }
+            }
+        }
+    }
+    .nav-tabs-inverse-mode{
+        .nav-link{
+            &.active{
+                color: rgba($white, 0.7) !important;
+                @include hover-focus-state{
+                    color: rgba($white, 0.7) !important;
+                }
+            }
+        }
+    }
+    .timeline__post{
+        background-color: lighten($black, 15%); 
+    }
+    .timeline{
+        .timeline-item{
+            >.timeline-event{
+                background-color: lighten($black, 15%);
+                border-color: rgba($white, 0.12);
+                color: rgba($white, 0.7);
+                &.timeline-event-default{
+                    background-color: lighten($black, 15%);
+                    border-color: rgba($white, 0.12);
+                    color: rgba($white, 0.7);                    
+                    &:before{
+                        border-left-color: rgba($white, 0.12);
+                        border-right-color: rgba($white, 0.12);
+                    }                    
+                    &:after{                    
+                        border-left-color: lighten($black, 15%);
+                        border-right-color: lighten($black, 15%);
+                    }
+                }
+                &:before{
+                    border-left-color: rgba($white, 0.12);
+                    border-right-color: rgba($white, 0.12);
+                }
+                &:after{                    
+                    border-left-color: lighten($black, 15%);
+                    border-right-color: lighten($black, 15%);
+                }
+            } 
+        }
+    }
+    .panel{
+       background-color: lighten($black, 15%); 
+    }
+    .panel-title{
+        color: rgba($white, 0.7);
+    }
+    .fontawesome-icon-list{
+        .fa-hover{
+            color: rgba($white, 0.7);
+        } 
+    }
+    .ion-icon-list{
+        .ion-hover {
+            color: rgba($white, 0.7);
+        }
+    }
+    .bs-glyphicons{
+        li{            
+            border-color: rgba($white, 0.12);
+            color: rgba($white, 0.7);
+        }
+    }
+    .icon-list-demo{
+        div{
+            color: rgba($white, 0.7);
+        }
+    }
+    .dp-off{
+        background-color: lighten($black, 15%)!important; 
+    }
+    .dp-divider{
+        border-color: rgba($white, 0.12) !important;
+    }
+    .myadmin-dd{
+        .dd-list{
+            .dd-item{
+                .dd-handle{
+                    background-color: lighten($black, 15%);
+                }
+            }
+            .dd3-content{
+                background-color: lighten($black, 15%);
+            }
+            .dd3-handle{
+                background-color: lighten($black, 15%);
+            }
+        }
+    }
+    .grid-stack-item-content{
+        background-color: lighten($black, 15%);
+        color: rgba($white, 0.7);
+    }
+    .sweet-alert{
+        background-color: lighten($black, 15%);
+        h2{            
+            color: rgba($white, 0.7);
+        }
+        p{
+            color: rgba($white, 0.7);
+        }
+        .sa-icon.sa-success{
+            @include before-after-state{
+                background-color: lighten($black, 15%);
+            }
+            .sa-fix {
+                background-color: lighten($black, 15%);
+            }
+        }
+    }
+    .ct-grid{
+        stroke: rgba($white, 0.2);
+    }
+    .ct-label{        
+        fill: rgba($white, 0.4);
+        color: rgba($white, 0.4);
+    }
+    .invoice{
+        border-color: rgba($white, 0.12);
+        background-color: lighten($black, 15%);
+    }
+    .invoice-details{
+        border-color: rgba($white, 0.12);
+        background-color: lighten($black, 15%);
+    }
+    .product-list-in-box{
+        >.item {
+            border-color: rgba($white, 0.12);
+        }
+    }
+    .list-group-item{        
+        background-color: lighten($black, 30%);    
+	    border: 1px solid rgba($white, 0.12);
+    }
+    .list-style-none{
+        li{
+            &.divider{
+               background-color: lighten($black, 30%); 
+            } 
+        } 
+    }
+    .attachment-block{
+        background-color: lighten($black, 30%);    
+	    border-color: rgba($white, 0.12);
+        .attachment-text{
+            color: lighten($black, 45%);
+        }
+    }
+    .badge-ring{
+        &::after{            
+            background-color: lighten($black, 25%);
+        }
+    }
+    :not(pre)>code[class*="language-"]{
+        background: lighten($black, 15%);
+        border: 1px solid lighten($black, 20%);
+        border-left: 2px solid $warning;
+    }
+    pre[class*="language-"]{
+        background: lighten($black, 15%);
+        border: 1px solid lighten($black, 20%);
+        border-left: 2px solid $warning;
+    }
+    hr{
+        border-top-color: rgba($white, 0.1);
+    }
+    .icons-list-demo{
+         div {
+            color: lighten($black, 70%);
+        }
+    }
+    .custom-file-label{
+        background-color: lighten($black, 30%);
+        border: 1px solid rgba($white, 0.12);
+        ::after {
+            color: lighten($black, 70%);
+            background-color: lighten($black, 30%);
+            border-left: 1px solid rgba($white, 0.12);
+        }
+    }
+    .dropzone {
+        background-color: lighten($black, 15%);
+    }
+    
+    .main-header{
+        li{
+            &.user-header{                
+                background-color: $white;   
+            } 
+        }
+        .navbar{
+            .sidebar-toggle{
+                color: $white;
+            }
+            .res-only-view{
+                color: $white;
+            }
+            .nav{
+                    >li{
+                    >a{
+                       color: $white;
+                            @include hover-state{
+                                background-color: rgba($black, 0.05);
+                            }
+                        }
+                    }
+                    .open{
+                        >a{
+                           background-color: rgba($black, 0.05); 
+                                @include hover-focus-state{
+                                    background-color: rgba($black, 0.05);
+                                }
+                        }
+                    }
+                    >.active{
+                        >a{
+                           background-color: rgba($black, 0.05); 
+                        }
+                    }
+            }
+        }
+    }    
+    .main-footer{
+        background: $black;
+        color: rgba($white, 0.7);
+        border-color: rgba($white, 0.12);
+    }
+    .main-sidebar{
+        box-shadow: 0 10px 15px -5px rgba(lighten($dark, 15%), .07);
+        background-color: rgba(lighten($black, 30%), 0.75);
+    }
+    .left-side{
+        box-shadow: 0 10px 15px -5px rgba(lighten($dark, 15%), .07);
+        background-color: rgba(lighten($black, 30%), 0.75);   
+    }
+    .user-panel{
+        >.info{
+           color: $white; 
+            >a{
+                color: $white; 
+            }
+        } 
+    }
+    .sidebar-menu{
+        >li{
+            &:hover{
+                >a{
+                  color: $white;
+                    >i{
+                       color: lighten($black, 60%);
+	                   border: 1px solid lighten($black, 60%);
+                    }
+                }
+            }
+            &.active{
+                >a{
+                  color: $white; 
+                    >i{
+                       color: lighten($black, 60%);
+	                   border: 1px solid lighten($black, 60%);
+                    }
+                }
+            }
+            &.menu-open{
+                >a{
+                  color: $white;  
+                    >i{
+                       color: lighten($black, 60%);
+	                   border: 1px solid lighten($black, 60%);
+                    }
+                }
+            }
+            >a{
+                >i{
+                   color: lighten($black, 60%); 
+                }
+            }
+            >.treeview-menu{
+                margin: 0 0px;
+            }
+        } 
+        li{
+            &.header{
+                color: lighten($black, 70%);
+            }
+        }
+    }
+    &.sidebar-collapse{
+        .sidebar-menu{
+            >li{
+                >.treeview-menu{
+                    background-color: rgba(lighten($black, 30%), 0.75);
+                } 
+            }
+        }
+    }
+    &.sidebar-mini{
+        &.sidebar-collapse{
+            .sidebar-menu{
+                >li{
+                    >a{
+                        >span{
+                            background-color: rgba(lighten($black, 30%), 0.75) !important;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include screen-sm-max{
+    .dark-skin{
+        &.sidebar-mini{
+            &.sidebar-collapse{
+                .sidebar-menu{
+                    >li{
+                        >a{
+                            >span{
+                               background-color: rgba(lighten($black, 30%), 0) !important; 
+                            } 
+                        } 
+                        &.menu-open{
+                            >a{
+                                background-color: rgba(lighten($black, 30%), 0) !important;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                background-color: rgba(lighten($black, 30%), 0) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.dark-skin{
+    .sidebar{
+        a{
+          color: $white; 
+            &:hover{
+               text-decoration: none; 
+            }
+        }
+    }
+    .sidebar-form{
+        border: 1px solid lighten($black, 60%);
+        input[type="text"]{
+            box-shadow: none;
+            background-color: rgba($black, 0.59);
+            border: 1px solid rgba($black, 0.59);
+            color: $white;
+                &:focus{
+                    color: $white;
+                    + .input-group-btn .btn{
+                        color: $white;
+                    }
+                }
+        }
+        .btn{
+            box-shadow: none;
+            background-color: rgba($black, 0.59);
+            border: 1px solid rgba($black, 0.59);
+            color: $light;
+        }
+    }
+    .main-footer{
+       background-color: rgba(lighten($black, 20%), 0.8);
+        color: $white;
+        border-top: 1px solid rgba($white, 0.12); 
+    }
+    .nav-dot-separated{
+        .nav-item::after{
+           color: rgba($white, 0.7); 
+        } 
+        >.nav-link::after{
+           color: rgba($white, 0.7); 
+        } 
+    }
+    .box{
+        
+        background-color: lighten($black, 30%);
+	    box-shadow: 0px 1px 3px 0px rgba(lighten($black, 25%), 1), 0px 1px 1px 0px rgba(lighten($black, 15%), 1), 0px 2px 1px -1px rgba(lighten($black, 10%), 1);
+    }
+    .box-header{
+        color: rgba($white, 0.7);
+    }
+    .control-sidebar{
+        color: lighten($dark, 55%);
+        background-color: lighten($black, 15%);
+        +.control-sidebar-bg{            
+            background-color: lighten($black, 15%);
+        }
+        .nav-tabs{
+            &.control-sidebar-tabs{
+                border-bottom: 1px solid lighten($black, 35%);
+                >li{
+                    >a{
+                       color: lighten($black, 80%);
+                        &:hove{
+                            color: $white;
+                        }
+                        @include hover-state{
+                            background-color: transparent;
+                        }
+                        &.active{
+                            background-color: transparent;
+                            @include hover-state{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .control-sidebar-heading{
+            color: $white;
+        }
+        .control-sidebar-subheading{
+           color: $white; 
+        }
+        .control-sidebar-menu{
+            >li{
+                >a {
+                    .menu-info{
+                        >p{
+                           color: lighten($black, 70%); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .control-sidebar-dark{
+        .control-sidebar-menu{
+            >li{
+                >a:hover{
+                    background-color: lighten($black, 10%);
+                }
+            }
+        }
+    }
+}
+
+

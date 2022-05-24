@@ -1,0 +1,2815 @@
+/**************************************
+Theme rosegold Color
+**************************************/
+.bg-gradient-rosegold 
+{
+	background-image: $theme-rosegold-grd;
+}
+.theme-rosegold{ 
+    .bg-gradient-rosegold{@extend .bg-gradient-rosegold}
+    .art-bg{@extend .bg-gradient-rosegold}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-rosegold
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-rosegold}
+    }
+}
+
+.theme-rosegold.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-rosegold-dark
+{
+	background-image: $theme-rosegold-grd-dark;
+}
+
+.dark-skin{
+&.theme-rosegold{ 
+    .bg-gradient-rosegold{@extend .bg-gradient-rosegold-dark}
+    .art-bg{@extend .bg-gradient-rosegold-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-rosegold-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-rosegold-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-rosegold{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-rosegold-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-rosegold{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-rosegold-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-rosegold{
+    a{  
+        
+        @include hover-state{
+            color: $theme-rosegold-primary;
+        }         
+    }
+}
+/*---Main Nav---*/
+.theme-rosegold{
+    .sm-blue{
+        a{
+            &.current, &.highlighted{
+                background: $theme-rosegold-primary;
+                color: $white !important;
+            }
+            @include hover-state{
+                background: $theme-rosegold-primary;
+                color: $white !important;
+            }
+        }
+        ul{
+            a{
+                @include hover-state{
+                    background: $theme-rosegold-primary;
+                    color: $white !important;
+                }
+                &.highlighted{
+                    background: $theme-rosegold-primary;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+/*---Primary Button---*/
+.theme-rosegold {
+    .btn-link {
+        color: $theme-rosegold-primary;
+    }
+    .btn-primary {
+        background-color: $theme-rosegold-primary;
+        border-color: $theme-rosegold-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-rosegold-primary, 10%) !important;
+            border-color: darken($theme-rosegold-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-rosegold-primary, 20%);
+            border-color: $theme-rosegold-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-rosegold-primary, 20%);
+            border-color: $theme-rosegold-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-primary, 10%) !important;
+            border-color: darken($theme-rosegold-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-rosegold-primary;
+        background-color: transparent;
+        border-color: $theme-rosegold-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-primary, 10%) !important;
+            border-color: darken($theme-rosegold-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-primary, 10%) !important;
+            border-color: darken($theme-rosegold-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-rosegold-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-primary, 10%) !important;
+            border-color: darken($theme-rosegold-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-rosegold {
+    .btn-info {
+        background-color: $theme-rosegold-info;
+        border-color: $theme-rosegold-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-rosegold-info, 10%) !important;
+            border-color: darken($theme-rosegold-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-rosegold-info, 20%);
+            border-color: $theme-rosegold-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-rosegold-info, 20%);
+            border-color: $theme-rosegold-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-info, 10%) !important;
+            border-color: darken($theme-rosegold-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-rosegold-info;
+        background-color: transparent;
+        border-color: $theme-rosegold-info;        
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-info, 10%) !important;
+            border-color: darken($theme-rosegold-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-info, 10%) !important;
+            border-color: darken($theme-rosegold-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-rosegold-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-info, 10%) !important;
+            border-color: darken($theme-rosegold-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-rosegold {
+    .btn-success {
+        background-color: $theme-rosegold-success;
+        border-color: $theme-rosegold-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-rosegold-success, 10%) !important;
+            border-color: darken($theme-rosegold-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-rosegold-success, 20%);
+            border-color: $theme-rosegold-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-rosegold-success, 20%);
+            border-color: $theme-rosegold-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-success, 10%) !important;
+            border-color: darken($theme-rosegold-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-rosegold-success;
+        background-color: transparent;
+        border-color: $theme-rosegold-success;        
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-success, 10%) !important;
+            border-color: darken($theme-rosegold-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-success, 10%) !important;
+            border-color: darken($theme-rosegold-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-rosegold-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-success, 10%) !important;
+            border-color: darken($theme-rosegold-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-rosegold {
+    .btn-danger {
+        background-color: $theme-rosegold-danger;
+        border-color: $theme-rosegold-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-rosegold-danger, 10%) !important;
+            border-color: darken($theme-rosegold-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-rosegold-danger, 20%);
+            border-color: $theme-rosegold-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-rosegold-danger, 20%);
+            border-color: $theme-rosegold-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-danger, 10%) !important;
+            border-color: darken($theme-rosegold-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-rosegold-danger;
+        background-color: transparent;
+        border-color: $theme-rosegold-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-danger, 10%) !important;
+            border-color: darken($theme-rosegold-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-danger, 10%) !important;
+            border-color: darken($theme-rosegold-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-rosegold-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-danger, 10%) !important;
+            border-color: darken($theme-rosegold-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-rosegold {
+    .btn-warning {
+        background-color: $theme-rosegold-warning;
+        border-color: $theme-rosegold-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-rosegold-warning, 10%) !important;
+            border-color: darken($theme-rosegold-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-rosegold-warning, 20%);
+            border-color: $theme-rosegold-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-rosegold-warning, 20%);
+            border-color: $theme-rosegold-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-warning, 10%) !important;
+            border-color: darken($theme-rosegold-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-rosegold-warning;
+        background-color: transparent;
+        border-color: $theme-rosegold-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-warning, 10%) !important;
+            border-color: darken($theme-rosegold-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-rosegold-warning, 10%) !important;
+            border-color: darken($theme-rosegold-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-rosegold-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-rosegold-warning, 10%) !important;
+            border-color: darken($theme-rosegold-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-rosegold{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-rosegold-primary;
+        background-color: $theme-rosegold-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-rosegold-info;
+        background-color: $theme-rosegold-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-rosegold-success;
+        background-color: $theme-rosegold-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-rosegold-danger;
+        background-color: $theme-rosegold-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-rosegold-warning;
+        background-color: $theme-rosegold-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-rosegold{
+    .alert-primary{
+        border-color: $theme-rosegold-primary;
+        background-color: $theme-rosegold-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-rosegold-info;
+        background-color: $theme-rosegold-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-rosegold-success;
+        background-color: $theme-rosegold-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-rosegold-danger;
+        background-color: $theme-rosegold-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-rosegold-danger;
+        background-color: $theme-rosegold-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-rosegold-warning;
+        background-color: $theme-rosegold-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-rosegold {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-rosegold-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-rosegold-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-rosegold-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-rosegold-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-rosegold-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-rosegold-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-rosegold-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-rosegold-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-rosegold-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-rosegold-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-rosegold{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-rosegold-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-rosegold-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-rosegold-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-rosegold-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-rosegold-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-rosegold-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-rosegold-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-rosegold-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-rosegold-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-rosegold-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-rosegold {
+    .border-primary {
+        border-color: $theme-rosegold-primary !important;
+    }
+    .border-info {
+        border-color: $theme-rosegold-info !important;
+    }
+    .border-success {
+        border-color: $theme-rosegold-success !important;
+    }
+    .border-danger {
+        border-color: $theme-rosegold-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-rosegold-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-rosegold {
+    .bg-primary {
+      background-color: $theme-rosegold-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-rosegold-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-rosegold-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-rosegold-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-rosegold-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-rosegold {
+    .text-primary {
+      color: $theme-rosegold-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-rosegold-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-rosegold-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-rosegold-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-rosegold-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-rosegold-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-rosegold-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-rosegold-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-rosegold-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-rosegold-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-rosegold-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-rosegold-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-rosegold-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-rosegold-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-rosegold-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-rosegold {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-rosegold-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-rosegold-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-rosegold-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-rosegold-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-rosegold-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-rosegold {
+    .label-primary{
+        background-color: $theme-rosegold-primary !important;
+    }
+    .label-info{
+        background-color: $theme-rosegold-info !important;
+    }
+    .label-success{
+        background-color: $theme-rosegold-success !important;
+    }
+    .label-danger{
+        background-color: $theme-rosegold-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-rosegold-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-rosegold {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-rosegold-primary;
+            
+            &:before  {
+                border-color: $theme-rosegold-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-rosegold-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-rosegold-info;
+            
+            &:before  {
+                border-color: $theme-rosegold-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-rosegold-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-rosegold-success;
+            
+            &:before  {
+                border-color: $theme-rosegold-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-rosegold-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-rosegold-danger;
+            
+            &:before  {
+                border-color: $theme-rosegold-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-rosegold-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-rosegold-warning;
+            
+            &:before  {
+                border-color: $theme-rosegold-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-rosegold-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-rosegold-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-rosegold{ 
+    .box-primary {
+        background-color: $theme-rosegold-primary !important;
+    &.box-bordered{
+        border-color: $theme-rosegold-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-rosegold-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-rosegold-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-rosegold-info !important;
+    &.box-bordered{
+        border-color: $theme-rosegold-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-rosegold-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-rosegold-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-rosegold-success !important;
+    &.box-bordered{
+        border-color: $theme-rosegold-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-rosegold-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-rosegold-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-rosegold-danger !important;
+    &.box-bordered{
+        border-color: $theme-rosegold-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-rosegold-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-rosegold-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-rosegold-warning !important;
+    &.box-bordered{
+        border-color: $theme-rosegold-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-rosegold-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-rosegold-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-rosegold-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-rosegold-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-rosegold-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-rosegold-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-rosegold {
+    .progress-bar-primary {
+        background-color: $theme-rosegold-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-rosegold-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-rosegold-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-rosegold-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-rosegold-warning;
+    }
+}
+    /*---panel---*/
+.theme-rosegold {
+    .panel-primary {
+        border-color: $theme-rosegold-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-rosegold-primary;
+            border-color: $theme-rosegold-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-rosegold-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-rosegold-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-rosegold-primary;
+          border-top-color: $theme-rosegold-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-rosegold-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-rosegold-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-rosegold-info;
+            border-color: $theme-rosegold-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-rosegold-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-rosegold-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-rosegold-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-rosegold-info;
+          border-top-color: $theme-rosegold-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-rosegold-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-rosegold-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-rosegold-success;
+            border-color: $theme-rosegold-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-rosegold-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-rosegold-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-rosegold-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-rosegold-success;
+          border-top-color: $theme-rosegold-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-rosegold-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-rosegold-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-rosegold-danger;
+            border-color: $theme-rosegold-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-rosegold-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-rosegold-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-rosegold-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-rosegold-danger;
+          border-top-color: $theme-rosegold-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-rosegold-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-rosegold-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-rosegold-warning;
+            border-color: $theme-rosegold-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-rosegold-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-rosegold-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-rosegold-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-rosegold-warning;
+          border-top-color: $theme-rosegold-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-rosegold-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-rosegold {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-rosegold-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-rosegold-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-rosegold-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-rosegold-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-rosegold-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-rosegold-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-rosegold {
+    .badge-primary {
+        background-color: $theme-rosegold-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-rosegold-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-rosegold-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-rosegold-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-rosegold-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-rosegold-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-rosegold-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-rosegold-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-rosegold-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-rosegold-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-rosegold {
+    .rating-primary {
+        .active {
+            color: $theme-rosegold-primary;
+        }
+        :checked ~ label {
+            color: $theme-rosegold-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-rosegold-primary;
+                ~ label {
+                    color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-rosegold-info;
+        }
+        :checked ~ label {
+            color: $theme-rosegold-info;
+        }
+        label{
+            &:hover {
+                color: $theme-rosegold-info;
+                ~ label {
+                    color: $theme-rosegold-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-rosegold-success;
+        }
+        :checked ~ label {
+            color: $theme-rosegold-success;
+        }
+        label{
+            &:hover {
+                color: $theme-rosegold-success;
+                ~ label {
+                    color: $theme-rosegold-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-rosegold-danger;
+        }
+        :checked ~ label {
+            color: $theme-rosegold-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-rosegold-danger;
+                ~ label {
+                    color: $theme-rosegold-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-rosegold-warning;
+        }
+        :checked ~ label {
+            color: $theme-rosegold-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-rosegold-warning;
+                ~ label {
+                    color: $theme-rosegold-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-rosegold {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-rosegold-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-rosegold-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-rosegold-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-rosegold-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-rosegold-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-rosegold {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-rosegold-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-rosegold-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-rosegold-info, 10%);
+                background-color: transparent;
+                color: darken($theme-rosegold-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-rosegold-success, 10%);
+                background-color: transparent;
+                color: darken($theme-rosegold-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-rosegold-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-rosegold-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-rosegold-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-rosegold-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-rosegold-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-rosegold-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-rosegold-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-rosegold-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-rosegold-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-rosegold-primary;
+            background-color: $theme-rosegold-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-rosegold-primary;
+                background-color: $theme-rosegold-primary; 
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-rosegold-primary;
+                background-color: $theme-rosegold-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-rosegold {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-rosegold-primary;
+        }
+        .info {
+            border-left-color: $theme-rosegold-primary;
+        }
+        .success {
+            border-left-color: $theme-rosegold-success;
+        }
+        .danger {
+            border-left-color: $theme-rosegold-danger;
+        }
+        .warning {
+            border-left-color: $theme-rosegold-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-rosegold {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-rosegold-primary;
+                  border: 1px solid  $theme-rosegold-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-rosegold-primary;
+                  border-right-color: $theme-rosegold-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-rosegold-info;
+                  border: 1px solid  $theme-rosegold-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-rosegold-info;
+                  border-right-color: $theme-rosegold-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-rosegold-success;
+                  border: 1px solid  $theme-rosegold-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-rosegold-success;
+                  border-right-color: $theme-rosegold-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-rosegold-danger;
+                  border: 1px solid  $theme-rosegold-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-rosegold-danger;
+                  border-right-color: $theme-rosegold-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-rosegold-warning;
+                  border: 1px solid  $theme-rosegold-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-rosegold-warning;
+                  border-right-color: $theme-rosegold-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-rosegold-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-rosegold-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-rosegold-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-rosegold-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-rosegold-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-rosegold-primary;
+            }
+            .label-info {
+                background-color: $theme-rosegold-info;
+            }
+            .label-success {
+                background-color: $theme-rosegold-success;
+            }
+            .label-danger {
+                background-color: $theme-rosegold-danger;
+            }
+            .label-warning {
+                background-color: $theme-rosegold-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-rosegold-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-rosegold-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-rosegold{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-rosegold-primary; 
+                &:hover{
+                   background-color: $theme-rosegold-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-rosegold-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-rosegold-primary;
+                background-color: $theme-rosegold-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-rosegold{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-rosegold-primary;
+                        color: $theme-rosegold-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-rosegold-primary;
+                        color: $theme-rosegold-primary;
+                        @include hover-state{
+                            border-color: $theme-rosegold-primary;
+                            color: $theme-rosegold-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-rosegold-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-rosegold{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-rosegold-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-rosegold-primary;
+	                   background-color: $theme-rosegold-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-rosegold-primary;
+	                   background-color: $theme-rosegold-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-rosegold-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-rosegold-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-rosegold-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-rosegold {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-rosegold-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-rosegold-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-rosegold-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-rosegold-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-primary;
+                    border-bottom: 2px solid $theme-rosegold-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-info;
+                    border-bottom: 2px solid $theme-rosegold-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-success;
+                    border-bottom: 2px solid $theme-rosegold-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-danger;
+                    border-bottom: 2px solid $theme-rosegold-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-warning;
+                    border-bottom: 2px solid $theme-rosegold-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-info;
+                    background-color: $theme-rosegold-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-success;
+                    background-color: $theme-rosegold-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-danger;
+                    background-color: $theme-rosegold-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-warning;
+                    background-color: $theme-rosegold-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-primary;
+                    border-color: $theme-rosegold-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-rosegold-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-primary;
+                    border: 2px solid $theme-rosegold-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-info;
+                    border-color: $theme-rosegold-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-rosegold-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-info;
+                    border: 2px solid $theme-rosegold-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-success;
+                    border-color: $theme-rosegold-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-rosegold-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-success;
+                    border: 2px solid $theme-rosegold-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-danger;
+                    border-color: $theme-rosegold-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-rosegold-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-danger;
+                    border: 2px solid $theme-rosegold-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-warning;
+                    border-color: $theme-rosegold-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-rosegold-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-rosegold-warning;
+                    border: 2px solid $theme-rosegold-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-rosegold-primary;
+                    border-bottom: 2px solid $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-rosegold-primary;
+                }
+                &:after {
+                    background-color: $theme-rosegold-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-rosegold{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-rosegold-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-rosegold-primary;
+                border-color: $theme-rosegold-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-rosegold-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-rosegold {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-rosegold-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-rosegold-primary;
+                        color: $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-rosegold {
+    .jq-icon-primary { 
+        background-color: $theme-rosegold-primary; 
+        color: $white; 
+        border-color: $theme-rosegold-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-rosegold-info; 
+        color: $white; 
+        border-color: $theme-rosegold-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-rosegold-success; 
+        color: $white; 
+        border-color: $theme-rosegold-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-rosegold-danger; 
+        color: $white; 
+        border-color: $theme-rosegold-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-rosegold-danger; 
+        color: $white; 
+        border-color: $theme-rosegold-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-rosegold-warning; 
+        color: $white; 
+        border-color: $theme-rosegold-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-rosegold {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-rosegold-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-rosegold-info;
+        }
+        &.status-success::after {
+            background-color: $theme-rosegold-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-rosegold-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-rosegold-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-rosegold-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-rosegold-primary, 10%);
+        border-color: darken($theme-rosegold-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-rosegold {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-rosegold-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-rosegold-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-rosegold{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-rosegold-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-rosegold-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-rosegold-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-rosegold{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-rosegold-primary;
+                        &:hover{
+                            border-left-color: $theme-rosegold-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-rosegold{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-rosegold-primary;
+                    background-color: $theme-rosegold-primary;
+                    &:hover{
+                        border: 1px solid $theme-rosegold-primary;
+                        background-color: $theme-rosegold-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-rosegold-primary, 10%);
+                    background-color: darken($theme-rosegold-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-rosegold-primary;
+                background-color: $theme-rosegold-primary;
+                    &:hover{
+                        border: 1px solid $theme-rosegold-primary;
+                        background-color: $theme-rosegold-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-rosegold-primary;
+                }
+                &:hover a{
+                    background-color: $theme-rosegold-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-rosegold-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-rosegold {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-rosegold-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-rosegold {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-rosegold-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-rosegold-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-rosegold-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-rosegold-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-rosegold-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-rosegold-primary;
+                border-color: $theme-rosegold-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-rosegold{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-rosegold-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-rosegold-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-rosegold-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-rosegold-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-rosegold{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-rosegold-primary;
+                        background-color: $theme-rosegold-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-rosegold-primary, 10%);
+                        background-color: darken($theme-rosegold-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-rosegold-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-rosegold-primary;
+                        }
+                       &:before{
+                            background-color: $theme-rosegold-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-rosegold-primary;
+                        }
+                       &:before{
+                            background-color: $theme-rosegold-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-rosegold-primary;
+                                color: $theme-rosegold-primary;
+                                &:after{
+                                    border-top-color: $theme-rosegold-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-rosegold-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-rosegold{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-rosegold-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-rosegold{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-rosegold-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-rosegold{
+    #primary {
+        .slider-selection{
+            background-color: $theme-rosegold-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-rosegold-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-rosegold-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-rosegold-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-rosegold-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-rosegold{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-rosegold-primary;
+	                    border-color: $theme-rosegold-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-rosegold-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-rosegold-primary;
+        }
+        a{
+            color: $theme-rosegold-primary; 
+            @include hover-focus-state{
+                color: $theme-rosegold-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-rosegold-primary;    
+            }
+        }
+    }
+}

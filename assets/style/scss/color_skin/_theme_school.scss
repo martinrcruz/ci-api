@@ -1,0 +1,2815 @@
+/**************************************
+Theme school Color
+**************************************/
+.bg-gradient-school 
+{
+	background-image: $theme-school-grd;
+}
+.theme-school{ 
+    .bg-gradient-school{@extend .bg-gradient-school}
+    .art-bg{@extend .bg-gradient-school}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-school
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-school}
+    }
+}
+
+.theme-school.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-school-dark
+{
+	background-image: $theme-school-grd-dark;
+}
+
+.dark-skin{
+&.theme-school{ 
+    .bg-gradient-school{@extend .bg-gradient-school-dark}
+    .art-bg{@extend .bg-gradient-school-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-school-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-school-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-school{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-school-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-school{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-school-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-school{
+    a{  
+        
+        @include hover-state{
+            color: $theme-school-primary;
+        }         
+    }
+}
+/*---Main Nav---*/
+.theme-school{
+    .sm-blue{
+        a{
+            &.current, &.highlighted{
+                background: $theme-school-primary;
+                color: $white !important;
+            }
+            @include hover-state{
+                background: $theme-school-primary;
+                color: $white !important;
+            }
+        }
+        ul{
+            a{
+                @include hover-state{
+                    background: $theme-school-primary;
+                    color: $white !important;
+                }
+                &.highlighted{
+                    background: $theme-school-primary;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+/*---Primary Button---*/
+.theme-school {
+    .btn-link {
+        color: $theme-school-primary;
+    }
+    .btn-primary {
+        background-color: $theme-school-primary;
+        border-color: $theme-school-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-school-primary, 10%) !important;
+            border-color: darken($theme-school-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-school-primary, 20%);
+            border-color: $theme-school-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-school-primary, 20%);
+            border-color: $theme-school-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-primary, 10%) !important;
+            border-color: darken($theme-school-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-school-primary;
+        background-color: transparent;
+        border-color: $theme-school-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-school-primary, 10%) !important;
+            border-color: darken($theme-school-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-primary, 10%) !important;
+            border-color: darken($theme-school-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-school-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-school-primary, 10%) !important;
+            border-color: darken($theme-school-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-school {
+    .btn-info {
+        background-color: $theme-school-info;
+        border-color: $theme-school-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-school-info, 10%) !important;
+            border-color: darken($theme-school-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-school-info, 20%);
+            border-color: $theme-school-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-school-info, 20%);
+            border-color: $theme-school-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-info, 10%) !important;
+            border-color: darken($theme-school-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-school-info;
+        background-color: transparent;
+        border-color: $theme-school-info;        
+        @include hover-active-state{
+            background-color: darken($theme-school-info, 10%) !important;
+            border-color: darken($theme-school-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-info, 10%) !important;
+            border-color: darken($theme-school-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-school-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-school-info, 10%) !important;
+            border-color: darken($theme-school-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-school {
+    .btn-success {
+        background-color: $theme-school-success;
+        border-color: $theme-school-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-school-success, 10%) !important;
+            border-color: darken($theme-school-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-school-success, 20%);
+            border-color: $theme-school-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-school-success, 20%);
+            border-color: $theme-school-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-success, 10%) !important;
+            border-color: darken($theme-school-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-school-success;
+        background-color: transparent;
+        border-color: $theme-school-success;        
+        @include hover-active-state{
+            background-color: darken($theme-school-success, 10%) !important;
+            border-color: darken($theme-school-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-success, 10%) !important;
+            border-color: darken($theme-school-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-school-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-school-success, 10%) !important;
+            border-color: darken($theme-school-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-school {
+    .btn-danger {
+        background-color: $theme-school-danger;
+        border-color: $theme-school-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-school-danger, 10%) !important;
+            border-color: darken($theme-school-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-school-danger, 20%);
+            border-color: $theme-school-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-school-danger, 20%);
+            border-color: $theme-school-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-danger, 10%) !important;
+            border-color: darken($theme-school-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-school-danger;
+        background-color: transparent;
+        border-color: $theme-school-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-school-danger, 10%) !important;
+            border-color: darken($theme-school-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-danger, 10%) !important;
+            border-color: darken($theme-school-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-school-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-school-danger, 10%) !important;
+            border-color: darken($theme-school-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-school {
+    .btn-warning {
+        background-color: $theme-school-warning;
+        border-color: $theme-school-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-school-warning, 10%) !important;
+            border-color: darken($theme-school-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-school-warning, 20%);
+            border-color: $theme-school-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-school-warning, 20%);
+            border-color: $theme-school-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-warning, 10%) !important;
+            border-color: darken($theme-school-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-school-warning;
+        background-color: transparent;
+        border-color: $theme-school-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-school-warning, 10%) !important;
+            border-color: darken($theme-school-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-school-warning, 10%) !important;
+            border-color: darken($theme-school-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-school-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-school-warning, 10%) !important;
+            border-color: darken($theme-school-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-school{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-school-primary;
+        background-color: $theme-school-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-school-info;
+        background-color: $theme-school-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-school-success;
+        background-color: $theme-school-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-school-danger;
+        background-color: $theme-school-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-school-warning;
+        background-color: $theme-school-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-school{
+    .alert-primary{
+        border-color: $theme-school-primary;
+        background-color: $theme-school-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-school-info;
+        background-color: $theme-school-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-school-success;
+        background-color: $theme-school-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-school-danger;
+        background-color: $theme-school-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-school-danger;
+        background-color: $theme-school-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-school-warning;
+        background-color: $theme-school-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-school {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-school-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-school-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-school-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-school-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-school-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-school-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-school-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-school-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-school-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-school-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-school-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-school{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-school-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-school-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-school-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-school-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-school-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-school-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-school-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-school-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-school-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-school-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-school {
+    .border-primary {
+        border-color: $theme-school-primary !important;
+    }
+    .border-info {
+        border-color: $theme-school-info !important;
+    }
+    .border-success {
+        border-color: $theme-school-success !important;
+    }
+    .border-danger {
+        border-color: $theme-school-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-school-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-school {
+    .bg-primary {
+      background-color: $theme-school-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-school-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-school-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-school-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-school-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-school {
+    .text-primary {
+      color: $theme-school-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-school-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-school-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-school-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-school-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-school-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-school-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-school-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-school-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-school-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-school-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-school-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-school-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-school-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-school-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-school {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-school-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-school-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-school-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-school-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-school-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-school {
+    .label-primary{
+        background-color: $theme-school-primary !important;
+    }
+    .label-info{
+        background-color: $theme-school-info !important;
+    }
+    .label-success{
+        background-color: $theme-school-success !important;
+    }
+    .label-danger{
+        background-color: $theme-school-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-school-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-school {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-school-primary;
+            
+            &:before  {
+                border-color: $theme-school-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-school-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-school-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-school-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-school-info;
+            
+            &:before  {
+                border-color: $theme-school-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-school-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-school-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-school-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-school-success;
+            
+            &:before  {
+                border-color: $theme-school-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-school-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-school-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-school-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-school-danger;
+            
+            &:before  {
+                border-color: $theme-school-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-school-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-school-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-school-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-school-warning;
+            
+            &:before  {
+                border-color: $theme-school-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-school-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-school-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-school-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-school-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-school{ 
+    .box-primary {
+        background-color: $theme-school-primary !important;
+    &.box-bordered{
+        border-color: $theme-school-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-school-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-school-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-school-info !important;
+    &.box-bordered{
+        border-color: $theme-school-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-school-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-school-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-school-success !important;
+    &.box-bordered{
+        border-color: $theme-school-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-school-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-school-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-school-danger !important;
+    &.box-bordered{
+        border-color: $theme-school-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-school-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-school-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-school-warning !important;
+    &.box-bordered{
+        border-color: $theme-school-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-school-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-school-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-school-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-school-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-school-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-school-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-school {
+    .progress-bar-primary {
+        background-color: $theme-school-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-school-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-school-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-school-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-school-warning;
+    }
+}
+    /*---panel---*/
+.theme-school {
+    .panel-primary {
+        border-color: $theme-school-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-school-primary;
+            border-color: $theme-school-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-school-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-school-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-school-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-school-primary;
+          border-top-color: $theme-school-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-school-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-school-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-school-info;
+            border-color: $theme-school-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-school-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-school-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-school-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-school-info;
+          border-top-color: $theme-school-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-school-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-school-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-school-success;
+            border-color: $theme-school-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-school-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-school-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-school-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-school-success;
+          border-top-color: $theme-school-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-school-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-school-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-school-danger;
+            border-color: $theme-school-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-school-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-school-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-school-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-school-danger;
+          border-top-color: $theme-school-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-school-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-school-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-school-warning;
+            border-color: $theme-school-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-school-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-school-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-school-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-school-warning;
+          border-top-color: $theme-school-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-school-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-school {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-school-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-school-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-school-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-school-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-school-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-school-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-school {
+    .badge-primary {
+        background-color: $theme-school-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-school-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-school-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-school-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-school-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-school-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-school-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-school-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-school-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-school-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-school {
+    .rating-primary {
+        .active {
+            color: $theme-school-primary;
+        }
+        :checked ~ label {
+            color: $theme-school-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-school-primary;
+                ~ label {
+                    color: $theme-school-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-school-info;
+        }
+        :checked ~ label {
+            color: $theme-school-info;
+        }
+        label{
+            &:hover {
+                color: $theme-school-info;
+                ~ label {
+                    color: $theme-school-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-school-success;
+        }
+        :checked ~ label {
+            color: $theme-school-success;
+        }
+        label{
+            &:hover {
+                color: $theme-school-success;
+                ~ label {
+                    color: $theme-school-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-school-danger;
+        }
+        :checked ~ label {
+            color: $theme-school-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-school-danger;
+                ~ label {
+                    color: $theme-school-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-school-warning;
+        }
+        :checked ~ label {
+            color: $theme-school-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-school-warning;
+                ~ label {
+                    color: $theme-school-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-school {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-school-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-school-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-school-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-school-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-school-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-school {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-school-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-school-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-school-info, 10%);
+                background-color: transparent;
+                color: darken($theme-school-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-school-success, 10%);
+                background-color: transparent;
+                color: darken($theme-school-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-school-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-school-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-school-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-school-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-school-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-school-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-school-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-school-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-school-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-school-primary;
+            background-color: $theme-school-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-school-primary;
+                background-color: $theme-school-primary;  
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-school-primary;
+                background-color: $theme-school-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-school-primary;
+                    background-color: $theme-school-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-school {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-school-primary;
+        }
+        .info {
+            border-left-color: $theme-school-primary;
+        }
+        .success {
+            border-left-color: $theme-school-success;
+        }
+        .danger {
+            border-left-color: $theme-school-danger;
+        }
+        .warning {
+            border-left-color: $theme-school-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-school {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-school-primary;
+                  border: 1px solid  $theme-school-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-school-primary;
+                  border-right-color: $theme-school-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-school-info;
+                  border: 1px solid  $theme-school-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-school-info;
+                  border-right-color: $theme-school-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-school-success;
+                  border: 1px solid  $theme-school-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-school-success;
+                  border-right-color: $theme-school-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-school-danger;
+                  border: 1px solid  $theme-school-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-school-danger;
+                  border-right-color: $theme-school-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-school-warning;
+                  border: 1px solid  $theme-school-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-school-warning;
+                  border-right-color: $theme-school-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-school-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-school-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-school-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-school-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-school-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-school-primary;
+            }
+            .label-info {
+                background-color: $theme-school-info;
+            }
+            .label-success {
+                background-color: $theme-school-success;
+            }
+            .label-danger {
+                background-color: $theme-school-danger;
+            }
+            .label-warning {
+                background-color: $theme-school-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-school-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-school-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-school{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-school-primary; 
+                &:hover{
+                   background-color: $theme-school-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-school-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-school-primary;
+                background-color: $theme-school-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-school{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-school-primary;
+                        color: $theme-school-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-school-primary;
+                        color: $theme-school-primary;
+                        @include hover-state{
+                            border-color: $theme-school-primary;
+                            color: $theme-school-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-school-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-school{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-school-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-school-primary;
+	                   background-color: $theme-school-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-school-primary;
+	                   background-color: $theme-school-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-school-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-school-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-school-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-school {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-school-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-school-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-school-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-school-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-primary;
+                    border-bottom: 2px solid $theme-school-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-info;
+                    border-bottom: 2px solid $theme-school-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-success;
+                    border-bottom: 2px solid $theme-school-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-danger;
+                    border-bottom: 2px solid $theme-school-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-warning;
+                    border-bottom: 2px solid $theme-school-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-primary;
+                    background-color: $theme-school-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-info;
+                    background-color: $theme-school-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-success;
+                    background-color: $theme-school-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-danger;
+                    background-color: $theme-school-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-warning;
+                    background-color: $theme-school-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-primary;
+                    border-color: $theme-school-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-school-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-primary;
+                    border: 2px solid $theme-school-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-info;
+                    border-color: $theme-school-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-school-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-info;
+                    border: 2px solid $theme-school-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-success;
+                    border-color: $theme-school-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-school-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-success;
+                    border: 2px solid $theme-school-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-danger;
+                    border-color: $theme-school-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-school-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-danger;
+                    border: 2px solid $theme-school-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-warning;
+                    border-color: $theme-school-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-school-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-school-warning;
+                    border: 2px solid $theme-school-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-school-primary;
+                    border-bottom: 2px solid $theme-school-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-primary;
+                    background-color: $theme-school-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-school-primary;
+                }
+                &:after {
+                    background-color: $theme-school-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-school-primary;
+                    background-color: $theme-school-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-school-primary;
+                    background-color: $theme-school-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-school{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-school-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-school-primary;
+                border-color: $theme-school-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-school-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-school {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-school-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-school-primary;
+                        color: $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-school {
+    .jq-icon-primary { 
+        background-color: $theme-school-primary; 
+        color: $white; 
+        border-color: $theme-school-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-school-info; 
+        color: $white; 
+        border-color: $theme-school-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-school-success; 
+        color: $white; 
+        border-color: $theme-school-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-school-danger; 
+        color: $white; 
+        border-color: $theme-school-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-school-danger; 
+        color: $white; 
+        border-color: $theme-school-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-school-warning; 
+        color: $white; 
+        border-color: $theme-school-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-school {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-school-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-school-info;
+        }
+        &.status-success::after {
+            background-color: $theme-school-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-school-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-school-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-school-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-school-primary, 10%);
+        border-color: darken($theme-school-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-school {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-school-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-school-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-school{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-school-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-school-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-school-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-school{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-school-primary;
+                        &:hover{
+                            border-left-color: $theme-school-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-school{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-school-primary;
+                    background-color: $theme-school-primary;
+                    &:hover{
+                        border: 1px solid $theme-school-primary;
+                        background-color: $theme-school-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-school-primary, 10%);
+                    background-color: darken($theme-school-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-school-primary;
+                background-color: $theme-school-primary;
+                    &:hover{
+                        border: 1px solid $theme-school-primary;
+                        background-color: $theme-school-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-school-primary;
+                }
+                &:hover a{
+                    background-color: $theme-school-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-school-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-school {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-school-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-school {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-school-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-school-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-school-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-school-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-school-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-school-primary;
+                border-color: $theme-school-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-school{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-school-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-school-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-school-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-school-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-school{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-school-primary;
+                        background-color: $theme-school-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-school-primary, 10%);
+                        background-color: darken($theme-school-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-school-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-school-primary;
+                        }
+                       &:before{
+                            background-color: $theme-school-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-school-primary;
+                        }
+                       &:before{
+                            background-color: $theme-school-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-school-primary;
+                                color: $theme-school-primary;
+                                &:after{
+                                    border-top-color: $theme-school-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-school-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-school{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-school-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-school{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-school-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-school{
+    #primary {
+        .slider-selection{
+            background-color: $theme-school-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-school-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-school-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-school-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-school-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-school{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-school-primary;
+	                    border-color: $theme-school-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-school-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-school-primary;
+        }
+        a{
+            color: $theme-school-primary; 
+            @include hover-focus-state{
+                color: $theme-school-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-school-primary;    
+            }
+        }
+    }
+}

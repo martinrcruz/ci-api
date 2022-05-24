@@ -1,0 +1,2815 @@
+/**************************************
+Theme grey Color
+**************************************/
+.bg-gradient-grey 
+{
+	background-image: $theme-grey-grd;
+}
+.theme-grey{ 
+    .bg-gradient-grey{@extend .bg-gradient-grey}
+    .art-bg{@extend .bg-gradient-grey}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-grey
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-grey}
+    }
+}
+
+.theme-grey.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-grey-dark
+{
+	background-image: $theme-grey-grd-dark;
+}
+
+.dark-skin{
+&.theme-grey{ 
+    .bg-gradient-grey{@extend .bg-gradient-grey-dark}
+    .art-bg{@extend .bg-gradient-grey-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-grey-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-grey-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-grey{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-grey-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-grey{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-grey-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-grey{
+    a{  
+        
+        @include hover-state{
+            color: $theme-grey-primary;
+        }         
+    }
+}
+/*---Main Nav---*/
+.theme-grey{
+    .sm-blue{
+        a{
+            &.current, &.highlighted{
+                background: $theme-grey-primary;
+                color: $white !important;
+            }
+            @include hover-state{
+                background: $theme-grey-primary;
+                color: $white !important;
+            }
+        }
+        ul{
+            a{
+                @include hover-state{
+                    background: $theme-grey-primary;
+                    color: $white !important;
+                }
+                &.highlighted{
+                    background: $theme-grey-primary;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+/*---Primary Button---*/
+.theme-grey {
+    .btn-link {
+        color: $theme-grey-primary;
+    }
+    .btn-primary {
+        background-color: $theme-grey-primary;
+        border-color: $theme-grey-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-grey-primary, 10%) !important;
+            border-color: darken($theme-grey-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-grey-primary, 20%);
+            border-color: $theme-grey-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-grey-primary, 20%);
+            border-color: $theme-grey-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-primary, 10%) !important;
+            border-color: darken($theme-grey-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-grey-primary;
+        background-color: transparent;
+        border-color: $theme-grey-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-grey-primary, 10%) !important;
+            border-color: darken($theme-grey-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-primary, 10%) !important;
+            border-color: darken($theme-grey-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-grey-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-grey-primary, 10%) !important;
+            border-color: darken($theme-grey-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-grey {
+    .btn-info {
+        background-color: $theme-grey-info;
+        border-color: $theme-grey-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-grey-info, 10%) !important;
+            border-color: darken($theme-grey-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-grey-info, 20%);
+            border-color: $theme-grey-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-grey-info, 20%);
+            border-color: $theme-grey-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-info, 10%) !important;
+            border-color: darken($theme-grey-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-grey-info;
+        background-color: transparent;
+        border-color: $theme-grey-info;        
+        @include hover-active-state{
+            background-color: darken($theme-grey-info, 10%) !important;
+            border-color: darken($theme-grey-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-info, 10%) !important;
+            border-color: darken($theme-grey-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-grey-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-grey-info, 10%) !important;
+            border-color: darken($theme-grey-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-grey {
+    .btn-success {
+        background-color: $theme-grey-success;
+        border-color: $theme-grey-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-grey-success, 10%) !important;
+            border-color: darken($theme-grey-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-grey-success, 20%);
+            border-color: $theme-grey-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-grey-success, 20%);
+            border-color: $theme-grey-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-success, 10%) !important;
+            border-color: darken($theme-grey-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-grey-success;
+        background-color: transparent;
+        border-color: $theme-grey-success;        
+        @include hover-active-state{
+            background-color: darken($theme-grey-success, 10%) !important;
+            border-color: darken($theme-grey-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-success, 10%) !important;
+            border-color: darken($theme-grey-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-grey-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-grey-success, 10%) !important;
+            border-color: darken($theme-grey-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-grey {
+    .btn-danger {
+        background-color: $theme-grey-danger;
+        border-color: $theme-grey-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-grey-danger, 10%) !important;
+            border-color: darken($theme-grey-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-grey-danger, 20%);
+            border-color: $theme-grey-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-grey-danger, 20%);
+            border-color: $theme-grey-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-danger, 10%) !important;
+            border-color: darken($theme-grey-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-grey-danger;
+        background-color: transparent;
+        border-color: $theme-grey-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-grey-danger, 10%) !important;
+            border-color: darken($theme-grey-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-danger, 10%) !important;
+            border-color: darken($theme-grey-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-grey-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-grey-danger, 10%) !important;
+            border-color: darken($theme-grey-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-grey {
+    .btn-warning {
+        background-color: $theme-grey-warning;
+        border-color: $theme-grey-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-grey-warning, 10%) !important;
+            border-color: darken($theme-grey-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-grey-warning, 20%);
+            border-color: $theme-grey-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-grey-warning, 20%);
+            border-color: $theme-grey-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-warning, 10%) !important;
+            border-color: darken($theme-grey-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-grey-warning;
+        background-color: transparent;
+        border-color: $theme-grey-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-grey-warning, 10%) !important;
+            border-color: darken($theme-grey-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-grey-warning, 10%) !important;
+            border-color: darken($theme-grey-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-grey-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-grey-warning, 10%) !important;
+            border-color: darken($theme-grey-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-grey{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-grey-primary;
+        background-color: $theme-grey-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-grey-info;
+        background-color: $theme-grey-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-grey-success;
+        background-color: $theme-grey-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-grey-danger;
+        background-color: $theme-grey-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-grey-warning;
+        background-color: $theme-grey-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-grey{
+    .alert-primary{
+        border-color: $theme-grey-primary;
+        background-color: $theme-grey-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-grey-info;
+        background-color: $theme-grey-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-grey-success;
+        background-color: $theme-grey-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-grey-danger;
+        background-color: $theme-grey-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-grey-danger;
+        background-color: $theme-grey-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-grey-warning;
+        background-color: $theme-grey-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-grey {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-grey-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-grey-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-grey-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-grey-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-grey-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-grey-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-grey-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-grey-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-grey-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-grey-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-grey{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-grey-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-grey-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-grey-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-grey-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-grey-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-grey-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-grey-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-grey-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-grey-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-grey-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-grey {
+    .border-primary {
+        border-color: $theme-grey-primary !important;
+    }
+    .border-info {
+        border-color: $theme-grey-info !important;
+    }
+    .border-success {
+        border-color: $theme-grey-success !important;
+    }
+    .border-danger {
+        border-color: $theme-grey-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-grey-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-grey {
+    .bg-primary {
+      background-color: $theme-grey-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-grey-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-grey-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-grey-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-grey-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-grey {
+    .text-primary {
+      color: $theme-grey-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-grey-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-grey-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-grey-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-grey-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-grey-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-grey-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-grey-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-grey-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-grey-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-grey-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-grey-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-grey-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-grey-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-grey-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-grey {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-grey-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-grey-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-grey-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-grey-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-grey-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-grey {
+    .label-primary{
+        background-color: $theme-grey-primary !important;
+    }
+    .label-info{
+        background-color: $theme-grey-info !important;
+    }
+    .label-success{
+        background-color: $theme-grey-success !important;
+    }
+    .label-danger{
+        background-color: $theme-grey-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-grey-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-grey {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-grey-primary;
+            
+            &:before  {
+                border-color: $theme-grey-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-grey-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-grey-info;
+            
+            &:before  {
+                border-color: $theme-grey-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-grey-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-grey-success;
+            
+            &:before  {
+                border-color: $theme-grey-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-grey-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-grey-danger;
+            
+            &:before  {
+                border-color: $theme-grey-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-grey-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-grey-warning;
+            
+            &:before  {
+                border-color: $theme-grey-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-grey-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-grey-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-grey{ 
+    .box-primary {
+        background-color: $theme-grey-primary !important;
+    &.box-bordered{
+        border-color: $theme-grey-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-grey-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-grey-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-grey-info !important;
+    &.box-bordered{
+        border-color: $theme-grey-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-grey-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-grey-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-grey-success !important;
+    &.box-bordered{
+        border-color: $theme-grey-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-grey-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-grey-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-grey-danger !important;
+    &.box-bordered{
+        border-color: $theme-grey-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-grey-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-grey-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-grey-warning !important;
+    &.box-bordered{
+        border-color: $theme-grey-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-grey-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-grey-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-grey-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-grey-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-grey-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-grey-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-grey {
+    .progress-bar-primary {
+        background-color: $theme-grey-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-grey-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-grey-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-grey-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-grey-warning;
+    }
+}
+    /*---panel---*/
+.theme-grey {
+    .panel-primary {
+        border-color: $theme-grey-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-grey-primary;
+            border-color: $theme-grey-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-grey-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-grey-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-grey-primary;
+          border-top-color: $theme-grey-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-grey-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-grey-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-grey-info;
+            border-color: $theme-grey-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-grey-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-grey-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-grey-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-grey-info;
+          border-top-color: $theme-grey-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-grey-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-grey-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-grey-success;
+            border-color: $theme-grey-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-grey-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-grey-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-grey-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-grey-success;
+          border-top-color: $theme-grey-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-grey-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-grey-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-grey-danger;
+            border-color: $theme-grey-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-grey-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-grey-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-grey-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-grey-danger;
+          border-top-color: $theme-grey-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-grey-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-grey-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-grey-warning;
+            border-color: $theme-grey-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-grey-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-grey-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-grey-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-grey-warning;
+          border-top-color: $theme-grey-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-grey-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-grey {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-grey-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-grey-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-grey-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-grey-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-grey-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-grey-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-grey {
+    .badge-primary {
+        background-color: $theme-grey-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-grey-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-grey-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-grey-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-grey-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-grey-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-grey-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-grey-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-grey-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-grey-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-grey {
+    .rating-primary {
+        .active {
+            color: $theme-grey-primary;
+        }
+        :checked ~ label {
+            color: $theme-grey-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-grey-primary;
+                ~ label {
+                    color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-grey-info;
+        }
+        :checked ~ label {
+            color: $theme-grey-info;
+        }
+        label{
+            &:hover {
+                color: $theme-grey-info;
+                ~ label {
+                    color: $theme-grey-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-grey-success;
+        }
+        :checked ~ label {
+            color: $theme-grey-success;
+        }
+        label{
+            &:hover {
+                color: $theme-grey-success;
+                ~ label {
+                    color: $theme-grey-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-grey-danger;
+        }
+        :checked ~ label {
+            color: $theme-grey-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-grey-danger;
+                ~ label {
+                    color: $theme-grey-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-grey-warning;
+        }
+        :checked ~ label {
+            color: $theme-grey-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-grey-warning;
+                ~ label {
+                    color: $theme-grey-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-grey {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-grey-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-grey-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-grey-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-grey-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-grey-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-grey {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-grey-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-grey-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-grey-info, 10%);
+                background-color: transparent;
+                color: darken($theme-grey-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-grey-success, 10%);
+                background-color: transparent;
+                color: darken($theme-grey-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-grey-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-grey-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-grey-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-grey-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-grey-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-grey-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-grey-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-grey-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-grey-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-grey-primary;
+            background-color: $theme-grey-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-grey-primary;
+                background-color: $theme-grey-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-grey-primary;
+                background-color: $theme-grey-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-grey-primary;
+                    background-color: $theme-grey-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-grey {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-grey-primary;
+        }
+        .info {
+            border-left-color: $theme-grey-primary;
+        }
+        .success {
+            border-left-color: $theme-grey-success;
+        }
+        .danger {
+            border-left-color: $theme-grey-danger;
+        }
+        .warning {
+            border-left-color: $theme-grey-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-grey {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-grey-primary;
+                  border: 1px solid  $theme-grey-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-grey-primary;
+                  border-right-color: $theme-grey-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-grey-info;
+                  border: 1px solid  $theme-grey-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-grey-info;
+                  border-right-color: $theme-grey-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-grey-success;
+                  border: 1px solid  $theme-grey-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-grey-success;
+                  border-right-color: $theme-grey-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-grey-danger;
+                  border: 1px solid  $theme-grey-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-grey-danger;
+                  border-right-color: $theme-grey-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-grey-warning;
+                  border: 1px solid  $theme-grey-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-grey-warning;
+                  border-right-color: $theme-grey-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-grey-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-grey-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-grey-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-grey-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-grey-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-grey-primary;
+            }
+            .label-info {
+                background-color: $theme-grey-info;
+            }
+            .label-success {
+                background-color: $theme-grey-success;
+            }
+            .label-danger {
+                background-color: $theme-grey-danger;
+            }
+            .label-warning {
+                background-color: $theme-grey-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-grey-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-grey-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-grey{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-grey-primary; 
+                &:hover{
+                   background-color: $theme-grey-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-grey-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-grey-primary;
+                background-color: $theme-grey-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-grey{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-grey-primary;
+                        color: $theme-grey-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-grey-primary;
+                        color: $theme-grey-primary;
+                        @include hover-state{
+                            border-color: $theme-grey-primary;
+                            color: $theme-grey-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-grey-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-grey{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-grey-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-grey-primary;
+	                   background-color: $theme-grey-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-grey-primary;
+	                   background-color: $theme-grey-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-grey-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-grey-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-grey-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-grey {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-grey-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-grey-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-grey-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-grey-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-primary;
+                    border-bottom: 2px solid $theme-grey-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-info;
+                    border-bottom: 2px solid $theme-grey-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-success;
+                    border-bottom: 2px solid $theme-grey-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-danger;
+                    border-bottom: 2px solid $theme-grey-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-warning;
+                    border-bottom: 2px solid $theme-grey-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-primary;
+                    background-color: $theme-grey-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-info;
+                    background-color: $theme-grey-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-success;
+                    background-color: $theme-grey-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-danger;
+                    background-color: $theme-grey-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-warning;
+                    background-color: $theme-grey-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-primary;
+                    border-color: $theme-grey-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-grey-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-primary;
+                    border: 2px solid $theme-grey-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-info;
+                    border-color: $theme-grey-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-grey-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-info;
+                    border: 2px solid $theme-grey-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-success;
+                    border-color: $theme-grey-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-grey-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-success;
+                    border: 2px solid $theme-grey-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-danger;
+                    border-color: $theme-grey-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-grey-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-danger;
+                    border: 2px solid $theme-grey-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-warning;
+                    border-color: $theme-grey-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-grey-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-grey-warning;
+                    border: 2px solid $theme-grey-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-grey-primary;
+                    border-bottom: 2px solid $theme-grey-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-primary;
+                    background-color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-grey-primary;
+                }
+                &:after {
+                    background-color: $theme-grey-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-grey-primary;
+                    background-color: $theme-grey-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-grey-primary;
+                    background-color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-grey{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-grey-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-grey-primary;
+                border-color: $theme-grey-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-grey-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-grey {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-grey-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-grey-primary;
+                        color: $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-grey {
+    .jq-icon-primary { 
+        background-color: $theme-grey-primary; 
+        color: $white; 
+        border-color: $theme-grey-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-grey-info; 
+        color: $white; 
+        border-color: $theme-grey-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-grey-success; 
+        color: $white; 
+        border-color: $theme-grey-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-grey-danger; 
+        color: $white; 
+        border-color: $theme-grey-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-grey-danger; 
+        color: $white; 
+        border-color: $theme-grey-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-grey-warning; 
+        color: $white; 
+        border-color: $theme-grey-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-grey {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-grey-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-grey-info;
+        }
+        &.status-success::after {
+            background-color: $theme-grey-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-grey-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-grey-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-grey-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-grey-primary, 10%);
+        border-color: darken($theme-grey-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-grey {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-grey-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-grey-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-grey{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-grey-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-grey-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-grey-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-grey{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-grey-primary;
+                        &:hover{
+                            border-left-color: $theme-grey-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-grey{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-grey-primary;
+                    background-color: $theme-grey-primary;
+                    &:hover{
+                        border: 1px solid $theme-grey-primary;
+                        background-color: $theme-grey-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-grey-primary, 10%);
+                    background-color: darken($theme-grey-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-grey-primary;
+                background-color: $theme-grey-primary;
+                    &:hover{
+                        border: 1px solid $theme-grey-primary;
+                        background-color: $theme-grey-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-grey-primary;
+                }
+                &:hover a{
+                    background-color: $theme-grey-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-grey-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-grey {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-grey-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-grey {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-grey-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-grey-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-grey-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-grey-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-grey-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-grey-primary;
+                border-color: $theme-grey-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-grey{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-grey-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-grey-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-grey-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-grey-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-grey{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-grey-primary;
+                        background-color: $theme-grey-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-grey-primary, 10%);
+                        background-color: darken($theme-grey-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-grey-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-grey-primary;
+                        }
+                       &:before{
+                            background-color: $theme-grey-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-grey-primary;
+                        }
+                       &:before{
+                            background-color: $theme-grey-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-grey-primary;
+                                color: $theme-grey-primary;
+                                &:after{
+                                    border-top-color: $theme-grey-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-grey-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-grey{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-grey-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-grey{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-grey-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-grey{
+    #primary {
+        .slider-selection{
+            background-color: $theme-grey-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-grey-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-grey-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-grey-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-grey-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-grey{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-grey-primary;
+	                    border-color: $theme-grey-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-grey-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-grey-primary;
+        }
+        a{
+            color: $theme-grey-primary; 
+            @include hover-focus-state{
+                color: $theme-grey-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-grey-primary;    
+            }
+        }
+    }
+}

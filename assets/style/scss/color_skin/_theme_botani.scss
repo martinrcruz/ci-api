@@ -1,0 +1,2815 @@
+/**************************************
+Theme botani Color
+**************************************/
+.bg-gradient-botani 
+{
+	background-image: $theme-botani-grd;
+}
+.theme-botani{ 
+    .bg-gradient-botani{@extend .bg-gradient-botani}
+    .art-bg{@extend .bg-gradient-botani}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-botani
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-botani}
+    }
+}
+
+.theme-botani.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-botani-dark
+{
+	background-image: $theme-botani-grd-dark;
+}
+
+.dark-skin{
+&.theme-botani{ 
+    .bg-gradient-botani{@extend .bg-gradient-botani-dark}
+    .art-bg{@extend .bg-gradient-botani-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-botani-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-botani-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-botani{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-botani-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-botani{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-botani-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-botani{
+    a{  
+        
+        @include hover-state{
+            color: $theme-botani-primary;
+        }         
+    }
+}
+/*---Main Nav---*/
+.theme-botani{
+    .sm-blue{
+        a{
+            &.current, &.highlighted{
+                background: $theme-botani-primary;
+                color: $white !important;
+            }
+            @include hover-state{
+                background: $theme-botani-primary;
+                color: $white !important;
+            }
+        }
+        ul{
+            a{
+                @include hover-state{
+                    background: $theme-botani-primary;
+                    color: $white !important;
+                }
+                &.highlighted{
+                    background: $theme-botani-primary;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+/*---Primary Button---*/
+.theme-botani {
+    .btn-link {
+        color: $theme-botani-primary;
+    }
+    .btn-primary {
+        background-color: $theme-botani-primary;
+        border-color: $theme-botani-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-botani-primary, 10%) !important;
+            border-color: darken($theme-botani-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-botani-primary, 20%);
+            border-color: $theme-botani-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-botani-primary, 20%);
+            border-color: $theme-botani-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-primary, 10%) !important;
+            border-color: darken($theme-botani-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-botani-primary;
+        background-color: transparent;
+        border-color: $theme-botani-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-botani-primary, 10%) !important;
+            border-color: darken($theme-botani-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-primary, 10%) !important;
+            border-color: darken($theme-botani-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-botani-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-botani-primary, 10%) !important;
+            border-color: darken($theme-botani-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-botani {
+    .btn-info {
+        background-color: $theme-botani-info;
+        border-color: $theme-botani-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-botani-info, 10%) !important;
+            border-color: darken($theme-botani-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-botani-info, 20%);
+            border-color: $theme-botani-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-botani-info, 20%);
+            border-color: $theme-botani-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-info, 10%) !important;
+            border-color: darken($theme-botani-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-botani-info;
+        background-color: transparent;
+        border-color: $theme-botani-info;        
+        @include hover-active-state{
+            background-color: darken($theme-botani-info, 10%) !important;
+            border-color: darken($theme-botani-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-info, 10%) !important;
+            border-color: darken($theme-botani-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-botani-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-botani-info, 10%) !important;
+            border-color: darken($theme-botani-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-botani {
+    .btn-success {
+        background-color: $theme-botani-success;
+        border-color: $theme-botani-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-botani-success, 10%) !important;
+            border-color: darken($theme-botani-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-botani-success, 20%);
+            border-color: $theme-botani-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-botani-success, 20%);
+            border-color: $theme-botani-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-success, 10%) !important;
+            border-color: darken($theme-botani-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-botani-success;
+        background-color: transparent;
+        border-color: $theme-botani-success;        
+        @include hover-active-state{
+            background-color: darken($theme-botani-success, 10%) !important;
+            border-color: darken($theme-botani-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-success, 10%) !important;
+            border-color: darken($theme-botani-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-botani-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-botani-success, 10%) !important;
+            border-color: darken($theme-botani-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-botani {
+    .btn-danger {
+        background-color: $theme-botani-danger;
+        border-color: $theme-botani-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-botani-danger, 10%) !important;
+            border-color: darken($theme-botani-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-botani-danger, 20%);
+            border-color: $theme-botani-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-botani-danger, 20%);
+            border-color: $theme-botani-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-danger, 10%) !important;
+            border-color: darken($theme-botani-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-botani-danger;
+        background-color: transparent;
+        border-color: $theme-botani-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-botani-danger, 10%) !important;
+            border-color: darken($theme-botani-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-danger, 10%) !important;
+            border-color: darken($theme-botani-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-botani-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-botani-danger, 10%) !important;
+            border-color: darken($theme-botani-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-botani {
+    .btn-warning {
+        background-color: $theme-botani-warning;
+        border-color: $theme-botani-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-botani-warning, 10%) !important;
+            border-color: darken($theme-botani-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-botani-warning, 20%);
+            border-color: $theme-botani-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-botani-warning, 20%);
+            border-color: $theme-botani-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-warning, 10%) !important;
+            border-color: darken($theme-botani-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-botani-warning;
+        background-color: transparent;
+        border-color: $theme-botani-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-botani-warning, 10%) !important;
+            border-color: darken($theme-botani-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-botani-warning, 10%) !important;
+            border-color: darken($theme-botani-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-botani-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-botani-warning, 10%) !important;
+            border-color: darken($theme-botani-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-botani{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-botani-primary;
+        background-color: $theme-botani-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-botani-info;
+        background-color: $theme-botani-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-botani-success;
+        background-color: $theme-botani-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-botani-danger;
+        background-color: $theme-botani-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-botani-warning;
+        background-color: $theme-botani-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-botani{
+    .alert-primary{
+        border-color: $theme-botani-primary;
+        background-color: $theme-botani-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-botani-info;
+        background-color: $theme-botani-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-botani-success;
+        background-color: $theme-botani-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-botani-danger;
+        background-color: $theme-botani-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-botani-danger;
+        background-color: $theme-botani-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-botani-warning;
+        background-color: $theme-botani-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-botani {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-botani-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-botani-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-botani-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-botani-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-botani-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-botani-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-botani-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-botani-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-botani-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-botani-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-botani{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-botani-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-botani-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-botani-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-botani-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-botani-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-botani-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-botani-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-botani-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-botani-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-botani-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-botani {
+    .border-primary {
+        border-color: $theme-botani-primary !important;
+    }
+    .border-info {
+        border-color: $theme-botani-info !important;
+    }
+    .border-success {
+        border-color: $theme-botani-success !important;
+    }
+    .border-danger {
+        border-color: $theme-botani-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-botani-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-botani {
+    .bg-primary {
+      background-color: $theme-botani-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-botani-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-botani-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-botani-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-botani-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-botani {
+    .text-primary {
+      color: $theme-botani-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-botani-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-botani-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-botani-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-botani-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-botani-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-botani-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-botani-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-botani-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-botani-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-botani-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-botani-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-botani-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-botani-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-botani-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-botani {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-botani-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-botani-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-botani-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-botani-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-botani-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-botani {
+    .label-primary{
+        background-color: $theme-botani-primary !important;
+    }
+    .label-info{
+        background-color: $theme-botani-info !important;
+    }
+    .label-success{
+        background-color: $theme-botani-success !important;
+    }
+    .label-danger{
+        background-color: $theme-botani-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-botani-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-botani {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-botani-primary;
+            
+            &:before  {
+                border-color: $theme-botani-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-botani-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-botani-info;
+            
+            &:before  {
+                border-color: $theme-botani-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-botani-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-botani-success;
+            
+            &:before  {
+                border-color: $theme-botani-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-botani-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-botani-danger;
+            
+            &:before  {
+                border-color: $theme-botani-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-botani-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-botani-warning;
+            
+            &:before  {
+                border-color: $theme-botani-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-botani-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-botani-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-botani{ 
+    .box-primary {
+        background-color: $theme-botani-primary !important;
+    &.box-bordered{
+        border-color: $theme-botani-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-botani-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-botani-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-botani-info !important;
+    &.box-bordered{
+        border-color: $theme-botani-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-botani-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-botani-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-botani-success !important;
+    &.box-bordered{
+        border-color: $theme-botani-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-botani-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-botani-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-botani-danger !important;
+    &.box-bordered{
+        border-color: $theme-botani-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-botani-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-botani-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-botani-warning !important;
+    &.box-bordered{
+        border-color: $theme-botani-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-botani-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-botani-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-botani-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-botani-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-botani-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-botani-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-botani {
+    .progress-bar-primary {
+        background-color: $theme-botani-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-botani-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-botani-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-botani-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-botani-warning;
+    }
+}
+    /*---panel---*/
+.theme-botani {
+    .panel-primary {
+        border-color: $theme-botani-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-botani-primary;
+            border-color: $theme-botani-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-botani-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-botani-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-botani-primary;
+          border-top-color: $theme-botani-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-botani-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-botani-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-botani-info;
+            border-color: $theme-botani-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-botani-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-botani-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-botani-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-botani-info;
+          border-top-color: $theme-botani-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-botani-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-botani-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-botani-success;
+            border-color: $theme-botani-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-botani-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-botani-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-botani-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-botani-success;
+          border-top-color: $theme-botani-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-botani-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-botani-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-botani-danger;
+            border-color: $theme-botani-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-botani-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-botani-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-botani-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-botani-danger;
+          border-top-color: $theme-botani-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-botani-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-botani-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-botani-warning;
+            border-color: $theme-botani-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-botani-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-botani-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-botani-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-botani-warning;
+          border-top-color: $theme-botani-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-botani-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-botani {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-botani-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-botani-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-botani-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-botani-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-botani-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-botani-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-botani {
+    .badge-primary {
+        background-color: $theme-botani-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-botani-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-botani-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-botani-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-botani-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-botani-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-botani-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-botani-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-botani-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-botani-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-botani {
+    .rating-primary {
+        .active {
+            color: $theme-botani-primary;
+        }
+        :checked ~ label {
+            color: $theme-botani-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-botani-primary;
+                ~ label {
+                    color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-botani-info;
+        }
+        :checked ~ label {
+            color: $theme-botani-info;
+        }
+        label{
+            &:hover {
+                color: $theme-botani-info;
+                ~ label {
+                    color: $theme-botani-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-botani-success;
+        }
+        :checked ~ label {
+            color: $theme-botani-success;
+        }
+        label{
+            &:hover {
+                color: $theme-botani-success;
+                ~ label {
+                    color: $theme-botani-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-botani-danger;
+        }
+        :checked ~ label {
+            color: $theme-botani-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-botani-danger;
+                ~ label {
+                    color: $theme-botani-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-botani-warning;
+        }
+        :checked ~ label {
+            color: $theme-botani-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-botani-warning;
+                ~ label {
+                    color: $theme-botani-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-botani {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-botani-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-botani-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-botani-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-botani-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-botani-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-botani {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-botani-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-botani-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-botani-info, 10%);
+                background-color: transparent;
+                color: darken($theme-botani-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-botani-success, 10%);
+                background-color: transparent;
+                color: darken($theme-botani-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-botani-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-botani-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-botani-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-botani-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-botani-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-botani-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-botani-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-botani-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-botani-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-botani-primary;
+            background-color: $theme-botani-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-botani-primary;
+                background-color: $theme-botani-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-botani-primary;
+                background-color: $theme-botani-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-botani-primary;
+                    background-color: $theme-botani-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-botani {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-botani-primary;
+        }
+        .info {
+            border-left-color: $theme-botani-primary;
+        }
+        .success {
+            border-left-color: $theme-botani-success;
+        }
+        .danger {
+            border-left-color: $theme-botani-danger;
+        }
+        .warning {
+            border-left-color: $theme-botani-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-botani {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-botani-primary;
+                  border: 1px solid  $theme-botani-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-botani-primary;
+                  border-right-color: $theme-botani-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-botani-info;
+                  border: 1px solid  $theme-botani-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-botani-info;
+                  border-right-color: $theme-botani-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-botani-success;
+                  border: 1px solid  $theme-botani-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-botani-success;
+                  border-right-color: $theme-botani-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-botani-danger;
+                  border: 1px solid  $theme-botani-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-botani-danger;
+                  border-right-color: $theme-botani-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-botani-warning;
+                  border: 1px solid  $theme-botani-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-botani-warning;
+                  border-right-color: $theme-botani-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-botani-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-botani-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-botani-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-botani-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-botani-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-botani-primary;
+            }
+            .label-info {
+                background-color: $theme-botani-info;
+            }
+            .label-success {
+                background-color: $theme-botani-success;
+            }
+            .label-danger {
+                background-color: $theme-botani-danger;
+            }
+            .label-warning {
+                background-color: $theme-botani-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-botani-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-botani-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-botani{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-botani-primary; 
+                &:hover{
+                   background-color: $theme-botani-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-botani-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-botani-primary;
+                background-color: $theme-botani-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-botani{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-botani-primary;
+                        color: $theme-botani-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-botani-primary;
+                        color: $theme-botani-primary;
+                        @include hover-state{
+                            border-color: $theme-botani-primary;
+                            color: $theme-botani-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-botani-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-botani{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-botani-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-botani-primary;
+	                   background-color: $theme-botani-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-botani-primary;
+	                   background-color: $theme-botani-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-botani-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-botani-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-botani-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-botani {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-botani-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-botani-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-botani-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-botani-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-primary;
+                    border-bottom: 2px solid $theme-botani-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-info;
+                    border-bottom: 2px solid $theme-botani-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-success;
+                    border-bottom: 2px solid $theme-botani-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-danger;
+                    border-bottom: 2px solid $theme-botani-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-warning;
+                    border-bottom: 2px solid $theme-botani-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-primary;
+                    background-color: $theme-botani-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-info;
+                    background-color: $theme-botani-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-success;
+                    background-color: $theme-botani-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-danger;
+                    background-color: $theme-botani-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-warning;
+                    background-color: $theme-botani-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-primary;
+                    border-color: $theme-botani-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-botani-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-primary;
+                    border: 2px solid $theme-botani-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-info;
+                    border-color: $theme-botani-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-botani-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-info;
+                    border: 2px solid $theme-botani-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-success;
+                    border-color: $theme-botani-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-botani-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-success;
+                    border: 2px solid $theme-botani-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-danger;
+                    border-color: $theme-botani-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-botani-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-danger;
+                    border: 2px solid $theme-botani-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-warning;
+                    border-color: $theme-botani-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-botani-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-botani-warning;
+                    border: 2px solid $theme-botani-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-botani-primary;
+                    border-bottom: 2px solid $theme-botani-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-primary;
+                    background-color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-botani-primary;
+                }
+                &:after {
+                    background-color: $theme-botani-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-botani-primary;
+                    background-color: $theme-botani-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-botani-primary;
+                    background-color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-botani{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-botani-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-botani-primary;
+                border-color: $theme-botani-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-botani-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-botani {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-botani-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-botani-primary;
+                        color: $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-botani {
+    .jq-icon-primary { 
+        background-color: $theme-botani-primary; 
+        color: $white; 
+        border-color: $theme-botani-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-botani-info; 
+        color: $white; 
+        border-color: $theme-botani-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-botani-success; 
+        color: $white; 
+        border-color: $theme-botani-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-botani-danger; 
+        color: $white; 
+        border-color: $theme-botani-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-botani-danger; 
+        color: $white; 
+        border-color: $theme-botani-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-botani-warning; 
+        color: $white; 
+        border-color: $theme-botani-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-botani {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-botani-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-botani-info;
+        }
+        &.status-success::after {
+            background-color: $theme-botani-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-botani-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-botani-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-botani-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-botani-primary, 10%);
+        border-color: darken($theme-botani-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-botani {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-botani-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-botani-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-botani{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-botani-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-botani-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-botani-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-botani{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-botani-primary;
+                        &:hover{
+                            border-left-color: $theme-botani-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-botani{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-botani-primary;
+                    background-color: $theme-botani-primary;
+                    &:hover{
+                        border: 1px solid $theme-botani-primary;
+                        background-color: $theme-botani-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-botani-primary, 10%);
+                    background-color: darken($theme-botani-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-botani-primary;
+                background-color: $theme-botani-primary;
+                    &:hover{
+                        border: 1px solid $theme-botani-primary;
+                        background-color: $theme-botani-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-botani-primary;
+                }
+                &:hover a{
+                    background-color: $theme-botani-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-botani-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-botani {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-botani-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-botani {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-botani-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-botani-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-botani-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-botani-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-botani-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-botani-primary;
+                border-color: $theme-botani-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-botani{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-botani-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-botani-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-botani-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-botani-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-botani{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-botani-primary;
+                        background-color: $theme-botani-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-botani-primary, 10%);
+                        background-color: darken($theme-botani-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-botani-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-botani-primary;
+                        }
+                       &:before{
+                            background-color: $theme-botani-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-botani-primary;
+                        }
+                       &:before{
+                            background-color: $theme-botani-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-botani-primary;
+                                color: $theme-botani-primary;
+                                &:after{
+                                    border-top-color: $theme-botani-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-botani-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-botani{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-botani-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-botani{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-botani-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-botani{
+    #primary {
+        .slider-selection{
+            background-color: $theme-botani-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-botani-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-botani-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-botani-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-botani-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-botani{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-botani-primary;
+	                    border-color: $theme-botani-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-botani-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-botani-primary;
+        }
+        a{
+            color: $theme-botani-primary; 
+            @include hover-focus-state{
+                color: $theme-botani-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-botani-primary;    
+            }
+        }
+    }
+}

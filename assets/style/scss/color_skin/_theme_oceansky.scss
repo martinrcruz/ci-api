@@ -1,0 +1,2815 @@
+/**************************************
+Theme oceansky Color
+**************************************/
+.bg-gradient-oceansky 
+{
+	background-image: $theme-oceansky-grd;
+}
+.theme-oceansky{ 
+    .bg-gradient-oceansky{@extend .bg-gradient-oceansky}
+    .art-bg{@extend .bg-gradient-oceansky}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-oceansky
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-oceansky}
+    }
+}
+
+.theme-oceansky.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-oceansky-dark
+{
+	background-image: $theme-oceansky-grd-dark;
+}
+
+.dark-skin{
+&.theme-oceansky{ 
+    .bg-gradient-oceansky{@extend .bg-gradient-oceansky-dark}
+    .art-bg{@extend .bg-gradient-oceansky-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-oceansky-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-oceansky-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-oceansky{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-oceansky-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-oceansky{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-oceansky-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-oceansky{
+    a{  
+        
+        @include hover-state{
+            color: $theme-oceansky-primary;
+        }         
+    }
+}
+/*---Main Nav---*/
+.theme-oceansky{
+    .sm-blue{
+        a{
+            &.current, &.highlighted{
+                background: $theme-oceansky-primary;
+                color: $white !important;
+            }
+            @include hover-state{
+                background: $theme-oceansky-primary;
+                color: $white !important;
+            }
+        }
+        ul{
+            a{
+                @include hover-state{
+                    background: $theme-oceansky-primary;
+                    color: $white !important;
+                }
+                &.highlighted{
+                    background: $theme-oceansky-primary;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+/*---Primary Button---*/
+.theme-oceansky {
+    .btn-link {
+        color: $theme-oceansky-primary;
+    }
+    .btn-primary {
+        background-color: $theme-oceansky-primary;
+        border-color: $theme-oceansky-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-oceansky-primary, 10%) !important;
+            border-color: darken($theme-oceansky-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-oceansky-primary, 20%);
+            border-color: $theme-oceansky-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-oceansky-primary, 20%);
+            border-color: $theme-oceansky-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-primary, 10%) !important;
+            border-color: darken($theme-oceansky-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-oceansky-primary;
+        background-color: transparent;
+        border-color: $theme-oceansky-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-primary, 10%) !important;
+            border-color: darken($theme-oceansky-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-primary, 10%) !important;
+            border-color: darken($theme-oceansky-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-oceansky-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-primary, 10%) !important;
+            border-color: darken($theme-oceansky-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-oceansky {
+    .btn-info {
+        background-color: $theme-oceansky-info;
+        border-color: $theme-oceansky-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-oceansky-info, 10%) !important;
+            border-color: darken($theme-oceansky-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-oceansky-info, 20%);
+            border-color: $theme-oceansky-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-oceansky-info, 20%);
+            border-color: $theme-oceansky-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-info, 10%) !important;
+            border-color: darken($theme-oceansky-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-oceansky-info;
+        background-color: transparent;
+        border-color: $theme-oceansky-info;        
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-info, 10%) !important;
+            border-color: darken($theme-oceansky-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-info, 10%) !important;
+            border-color: darken($theme-oceansky-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-oceansky-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-info, 10%) !important;
+            border-color: darken($theme-oceansky-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-oceansky {
+    .btn-success {
+        background-color: $theme-oceansky-success;
+        border-color: $theme-oceansky-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-oceansky-success, 10%) !important;
+            border-color: darken($theme-oceansky-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-oceansky-success, 20%);
+            border-color: $theme-oceansky-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-oceansky-success, 20%);
+            border-color: $theme-oceansky-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-success, 10%) !important;
+            border-color: darken($theme-oceansky-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-oceansky-success;
+        background-color: transparent;
+        border-color: $theme-oceansky-success;        
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-success, 10%) !important;
+            border-color: darken($theme-oceansky-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-success, 10%) !important;
+            border-color: darken($theme-oceansky-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-oceansky-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-success, 10%) !important;
+            border-color: darken($theme-oceansky-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-oceansky {
+    .btn-danger {
+        background-color: $theme-oceansky-danger;
+        border-color: $theme-oceansky-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-oceansky-danger, 10%) !important;
+            border-color: darken($theme-oceansky-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-oceansky-danger, 20%);
+            border-color: $theme-oceansky-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-oceansky-danger, 20%);
+            border-color: $theme-oceansky-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-danger, 10%) !important;
+            border-color: darken($theme-oceansky-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-oceansky-danger;
+        background-color: transparent;
+        border-color: $theme-oceansky-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-danger, 10%) !important;
+            border-color: darken($theme-oceansky-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-danger, 10%) !important;
+            border-color: darken($theme-oceansky-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-oceansky-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-danger, 10%) !important;
+            border-color: darken($theme-oceansky-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-oceansky {
+    .btn-warning {
+        background-color: $theme-oceansky-warning;
+        border-color: $theme-oceansky-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-oceansky-warning, 10%) !important;
+            border-color: darken($theme-oceansky-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-oceansky-warning, 20%);
+            border-color: $theme-oceansky-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-oceansky-warning, 20%);
+            border-color: $theme-oceansky-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-warning, 10%) !important;
+            border-color: darken($theme-oceansky-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-oceansky-warning;
+        background-color: transparent;
+        border-color: $theme-oceansky-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-warning, 10%) !important;
+            border-color: darken($theme-oceansky-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-oceansky-warning, 10%) !important;
+            border-color: darken($theme-oceansky-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-oceansky-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-oceansky-warning, 10%) !important;
+            border-color: darken($theme-oceansky-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-oceansky{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-oceansky-primary;
+        background-color: $theme-oceansky-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-oceansky-info;
+        background-color: $theme-oceansky-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-oceansky-success;
+        background-color: $theme-oceansky-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-oceansky-danger;
+        background-color: $theme-oceansky-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-oceansky-warning;
+        background-color: $theme-oceansky-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-oceansky{
+    .alert-primary{
+        border-color: $theme-oceansky-primary;
+        background-color: $theme-oceansky-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-oceansky-info;
+        background-color: $theme-oceansky-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-oceansky-success;
+        background-color: $theme-oceansky-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-oceansky-danger;
+        background-color: $theme-oceansky-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-oceansky-danger;
+        background-color: $theme-oceansky-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-oceansky-warning;
+        background-color: $theme-oceansky-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-oceansky {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-oceansky-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-oceansky-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-oceansky-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-oceansky-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-oceansky-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-oceansky-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-oceansky-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-oceansky-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-oceansky-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-oceansky-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-oceansky{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-oceansky-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-oceansky-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-oceansky-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-oceansky-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-oceansky-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-oceansky-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-oceansky-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-oceansky-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-oceansky-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-oceansky-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-oceansky {
+    .border-primary {
+        border-color: $theme-oceansky-primary !important;
+    }
+    .border-info {
+        border-color: $theme-oceansky-info !important;
+    }
+    .border-success {
+        border-color: $theme-oceansky-success !important;
+    }
+    .border-danger {
+        border-color: $theme-oceansky-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-oceansky-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-oceansky {
+    .bg-primary {
+      background-color: $theme-oceansky-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-oceansky-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-oceansky-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-oceansky-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-oceansky-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-oceansky {
+    .text-primary {
+      color: $theme-oceansky-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-oceansky-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-oceansky-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-oceansky-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-oceansky-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-oceansky-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-oceansky-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-oceansky-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-oceansky-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-oceansky-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-oceansky-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-oceansky-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-oceansky-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-oceansky-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-oceansky-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-oceansky {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-oceansky-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-oceansky-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-oceansky-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-oceansky-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-oceansky-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-oceansky {
+    .label-primary{
+        background-color: $theme-oceansky-primary !important;
+    }
+    .label-info{
+        background-color: $theme-oceansky-info !important;
+    }
+    .label-success{
+        background-color: $theme-oceansky-success !important;
+    }
+    .label-danger{
+        background-color: $theme-oceansky-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-oceansky-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-oceansky {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-oceansky-primary;
+            
+            &:before  {
+                border-color: $theme-oceansky-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-oceansky-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-oceansky-info;
+            
+            &:before  {
+                border-color: $theme-oceansky-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-oceansky-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-oceansky-success;
+            
+            &:before  {
+                border-color: $theme-oceansky-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-oceansky-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-oceansky-danger;
+            
+            &:before  {
+                border-color: $theme-oceansky-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-oceansky-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-oceansky-warning;
+            
+            &:before  {
+                border-color: $theme-oceansky-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-oceansky-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-oceansky-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-oceansky{ 
+    .box-primary {
+        background-color: $theme-oceansky-primary !important;
+    &.box-bordered{
+        border-color: $theme-oceansky-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-oceansky-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-oceansky-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-oceansky-info !important;
+    &.box-bordered{
+        border-color: $theme-oceansky-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-oceansky-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-oceansky-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-oceansky-success !important;
+    &.box-bordered{
+        border-color: $theme-oceansky-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-oceansky-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-oceansky-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-oceansky-danger !important;
+    &.box-bordered{
+        border-color: $theme-oceansky-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-oceansky-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-oceansky-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-oceansky-warning !important;
+    &.box-bordered{
+        border-color: $theme-oceansky-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-oceansky-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-oceansky-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-oceansky-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-oceansky-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-oceansky-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-oceansky-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-oceansky {
+    .progress-bar-primary {
+        background-color: $theme-oceansky-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-oceansky-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-oceansky-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-oceansky-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-oceansky-warning;
+    }
+}
+    /*---panel---*/
+.theme-oceansky {
+    .panel-primary {
+        border-color: $theme-oceansky-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-oceansky-primary;
+            border-color: $theme-oceansky-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-oceansky-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-oceansky-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-oceansky-primary;
+          border-top-color: $theme-oceansky-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-oceansky-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-oceansky-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-oceansky-info;
+            border-color: $theme-oceansky-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-oceansky-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-oceansky-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-oceansky-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-oceansky-info;
+          border-top-color: $theme-oceansky-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-oceansky-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-oceansky-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-oceansky-success;
+            border-color: $theme-oceansky-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-oceansky-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-oceansky-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-oceansky-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-oceansky-success;
+          border-top-color: $theme-oceansky-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-oceansky-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-oceansky-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-oceansky-danger;
+            border-color: $theme-oceansky-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-oceansky-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-oceansky-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-oceansky-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-oceansky-danger;
+          border-top-color: $theme-oceansky-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-oceansky-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-oceansky-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-oceansky-warning;
+            border-color: $theme-oceansky-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-oceansky-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-oceansky-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-oceansky-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-oceansky-warning;
+          border-top-color: $theme-oceansky-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-oceansky-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-oceansky {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-oceansky-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-oceansky-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-oceansky-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-oceansky-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-oceansky-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-oceansky-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-oceansky {
+    .badge-primary {
+        background-color: $theme-oceansky-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-oceansky-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-oceansky-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-oceansky-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-oceansky-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-oceansky-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-oceansky-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-oceansky-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-oceansky-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-oceansky-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-oceansky {
+    .rating-primary {
+        .active {
+            color: $theme-oceansky-primary;
+        }
+        :checked ~ label {
+            color: $theme-oceansky-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-oceansky-primary;
+                ~ label {
+                    color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-oceansky-info;
+        }
+        :checked ~ label {
+            color: $theme-oceansky-info;
+        }
+        label{
+            &:hover {
+                color: $theme-oceansky-info;
+                ~ label {
+                    color: $theme-oceansky-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-oceansky-success;
+        }
+        :checked ~ label {
+            color: $theme-oceansky-success;
+        }
+        label{
+            &:hover {
+                color: $theme-oceansky-success;
+                ~ label {
+                    color: $theme-oceansky-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-oceansky-danger;
+        }
+        :checked ~ label {
+            color: $theme-oceansky-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-oceansky-danger;
+                ~ label {
+                    color: $theme-oceansky-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-oceansky-warning;
+        }
+        :checked ~ label {
+            color: $theme-oceansky-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-oceansky-warning;
+                ~ label {
+                    color: $theme-oceansky-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-oceansky {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-oceansky-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-oceansky-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-oceansky-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-oceansky-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-oceansky-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-oceansky {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-oceansky-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-oceansky-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-oceansky-info, 10%);
+                background-color: transparent;
+                color: darken($theme-oceansky-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-oceansky-success, 10%);
+                background-color: transparent;
+                color: darken($theme-oceansky-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-oceansky-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-oceansky-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-oceansky-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-oceansky-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-oceansky-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-oceansky-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-oceansky-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-oceansky-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-oceansky-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-oceansky-primary;
+            background-color: $theme-oceansky-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-oceansky-primary;
+                background-color: $theme-oceansky-primary; 
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-oceansky-primary;
+                background-color: $theme-oceansky-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-oceansky {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-oceansky-primary;
+        }
+        .info {
+            border-left-color: $theme-oceansky-primary;
+        }
+        .success {
+            border-left-color: $theme-oceansky-success;
+        }
+        .danger {
+            border-left-color: $theme-oceansky-danger;
+        }
+        .warning {
+            border-left-color: $theme-oceansky-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-oceansky {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-oceansky-primary;
+                  border: 1px solid  $theme-oceansky-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-oceansky-primary;
+                  border-right-color: $theme-oceansky-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-oceansky-info;
+                  border: 1px solid  $theme-oceansky-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-oceansky-info;
+                  border-right-color: $theme-oceansky-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-oceansky-success;
+                  border: 1px solid  $theme-oceansky-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-oceansky-success;
+                  border-right-color: $theme-oceansky-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-oceansky-danger;
+                  border: 1px solid  $theme-oceansky-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-oceansky-danger;
+                  border-right-color: $theme-oceansky-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-oceansky-warning;
+                  border: 1px solid  $theme-oceansky-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-oceansky-warning;
+                  border-right-color: $theme-oceansky-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-oceansky-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-oceansky-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-oceansky-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-oceansky-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-oceansky-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-oceansky-primary;
+            }
+            .label-info {
+                background-color: $theme-oceansky-info;
+            }
+            .label-success {
+                background-color: $theme-oceansky-success;
+            }
+            .label-danger {
+                background-color: $theme-oceansky-danger;
+            }
+            .label-warning {
+                background-color: $theme-oceansky-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-oceansky-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-oceansky-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-oceansky{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-oceansky-primary; 
+                &:hover{
+                   background-color: $theme-oceansky-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-oceansky-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-oceansky-primary;
+                background-color: $theme-oceansky-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-oceansky{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-oceansky-primary;
+                        color: $theme-oceansky-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-oceansky-primary;
+                        color: $theme-oceansky-primary;
+                        @include hover-state{
+                            border-color: $theme-oceansky-primary;
+                            color: $theme-oceansky-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-oceansky-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-oceansky{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-oceansky-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-oceansky-primary;
+	                   background-color: $theme-oceansky-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-oceansky-primary;
+	                   background-color: $theme-oceansky-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-oceansky-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-oceansky-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-oceansky-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-oceansky {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-oceansky-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-oceansky-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-oceansky-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-oceansky-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-primary;
+                    border-bottom: 2px solid $theme-oceansky-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-info;
+                    border-bottom: 2px solid $theme-oceansky-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-success;
+                    border-bottom: 2px solid $theme-oceansky-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-danger;
+                    border-bottom: 2px solid $theme-oceansky-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-warning;
+                    border-bottom: 2px solid $theme-oceansky-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-info;
+                    background-color: $theme-oceansky-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-success;
+                    background-color: $theme-oceansky-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-danger;
+                    background-color: $theme-oceansky-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-warning;
+                    background-color: $theme-oceansky-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-primary;
+                    border-color: $theme-oceansky-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-oceansky-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-primary;
+                    border: 2px solid $theme-oceansky-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-info;
+                    border-color: $theme-oceansky-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-oceansky-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-info;
+                    border: 2px solid $theme-oceansky-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-success;
+                    border-color: $theme-oceansky-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-oceansky-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-success;
+                    border: 2px solid $theme-oceansky-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-danger;
+                    border-color: $theme-oceansky-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-oceansky-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-danger;
+                    border: 2px solid $theme-oceansky-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-warning;
+                    border-color: $theme-oceansky-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-oceansky-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-oceansky-warning;
+                    border: 2px solid $theme-oceansky-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-oceansky-primary;
+                    border-bottom: 2px solid $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-oceansky-primary;
+                }
+                &:after {
+                    background-color: $theme-oceansky-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-oceansky{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-oceansky-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-oceansky-primary;
+                border-color: $theme-oceansky-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-oceansky-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-oceansky {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-oceansky-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-oceansky-primary;
+                        color: $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-oceansky {
+    .jq-icon-primary { 
+        background-color: $theme-oceansky-primary; 
+        color: $white; 
+        border-color: $theme-oceansky-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-oceansky-info; 
+        color: $white; 
+        border-color: $theme-oceansky-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-oceansky-success; 
+        color: $white; 
+        border-color: $theme-oceansky-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-oceansky-danger; 
+        color: $white; 
+        border-color: $theme-oceansky-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-oceansky-danger; 
+        color: $white; 
+        border-color: $theme-oceansky-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-oceansky-warning; 
+        color: $white; 
+        border-color: $theme-oceansky-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-oceansky {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-oceansky-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-oceansky-info;
+        }
+        &.status-success::after {
+            background-color: $theme-oceansky-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-oceansky-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-oceansky-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-oceansky-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-oceansky-primary, 10%);
+        border-color: darken($theme-oceansky-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-oceansky {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-oceansky-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-oceansky-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-oceansky{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-oceansky-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-oceansky-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-oceansky-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-oceansky{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-oceansky-primary;
+                        &:hover{
+                            border-left-color: $theme-oceansky-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-oceansky{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-oceansky-primary;
+                    background-color: $theme-oceansky-primary;
+                    &:hover{
+                        border: 1px solid $theme-oceansky-primary;
+                        background-color: $theme-oceansky-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-oceansky-primary, 10%);
+                    background-color: darken($theme-oceansky-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-oceansky-primary;
+                background-color: $theme-oceansky-primary;
+                    &:hover{
+                        border: 1px solid $theme-oceansky-primary;
+                        background-color: $theme-oceansky-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-oceansky-primary;
+                }
+                &:hover a{
+                    background-color: $theme-oceansky-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-oceansky-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-oceansky {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-oceansky-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-oceansky {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-oceansky-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-oceansky-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-oceansky-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-oceansky-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-oceansky-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-oceansky-primary;
+                border-color: $theme-oceansky-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-oceansky{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-oceansky-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-oceansky-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-oceansky-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-oceansky-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-oceansky{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-oceansky-primary;
+                        background-color: $theme-oceansky-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-oceansky-primary, 10%);
+                        background-color: darken($theme-oceansky-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-oceansky-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-oceansky-primary;
+                        }
+                       &:before{
+                            background-color: $theme-oceansky-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-oceansky-primary;
+                        }
+                       &:before{
+                            background-color: $theme-oceansky-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-oceansky-primary;
+                                color: $theme-oceansky-primary;
+                                &:after{
+                                    border-top-color: $theme-oceansky-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-oceansky-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-oceansky{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-oceansky-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-oceansky{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-oceansky-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-oceansky{
+    #primary {
+        .slider-selection{
+            background-color: $theme-oceansky-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-oceansky-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-oceansky-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-oceansky-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-oceansky-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-oceansky{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-oceansky-primary;
+	                    border-color: $theme-oceansky-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-oceansky-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-oceansky-primary;
+        }
+        a{
+            color: $theme-oceansky-primary; 
+            @include hover-focus-state{
+                color: $theme-oceansky-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-oceansky-primary;    
+            }
+        }
+    }
+}
