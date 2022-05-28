@@ -66,13 +66,13 @@
 									<li class="dropdown user user-menu">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="User">
 											<!-- <img src="<?= base_url() ?>assets/images/fotoperfiles/ " class="float-left rounded-circle" alt="User Image">					   -->
-											<img src="<?= base_url()?>assets/images/profile-img.png" class="float-left rounded-circle" alt="User Image">
+											<img src="" class="float-left rounded-circle" alt="User Image">
 										</a>
-										<ul class="dropdown-menu">
+										<ul class="dropdown-menu animated flipInX">
 											<!-- User image -->
 											<li class="user-header bg-img" data-overlay="3">
 												<div class="flexbox align-self-center">
-													<img src="<?= base_url()?>assets/images/profile-img.png" class="float-left rounded-circle" alt="User Image">
+													<img src="" class="float-left rounded-circle" alt="User Image">
 													<h4 class="user-name align-self-center">
 														<span>Nombre usuario</span>
 														<br>

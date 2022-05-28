@@ -11,36 +11,36 @@ let form_actividad = {
 
 }
 
+let tabla_area = {
+    id: $('#tabla-area-actividad'),
+    idarea: $('#tabla-area-id-area'),
+    nombre: $('#tabla-area-nombre'),
+}
+
 
 
 var tabla_actividad = {
     id: '#tabla_actividad',
     columnas: [
-        { data: 'id' },
-        { data: 'nombre' },
-        { data: 'apellido' },
-        { data: 'rut' },
-        { data: 'edad' },
-        { data: 'sexo' },
-        { data: 'fecha_nacimiento' },
+        { data: 'actividad' },
         { data: 'opciones' },
     ],
     lenguaje: [1],
     sinorden: [1],
     invisible: [],
     data: { tipo: 1 },
-    url: '',
+    url: base_url + "actividad/getDataActividad",
     recordsTotal: 0
 
 }
 
-//DETECTA LA CARGA INICIAL DEL DOM, PODEMOS USARLO PARA GATILLAR EVENTOS QUE QUEREMOS CARGAR AL INICIAR LA PAGINA
 $(document).ready(function() {
+    cargarSelectArea(1);
+    configurarDescargaExcel();
     cargarTabla(tabla_actividad);
-    $('.dt-buttons').hide();
+    limpiaModal();
 })
 
-//Este metodo de Jquery nos permite detectar la accion click sobre un elemento
 $("#btn-actividad-agregar-actividad").on('click', function() {
 
     $('body').loading({ message: 'Cargando...' });
@@ -145,6 +145,89 @@ $("#formulario-actividad").on("submit", function(e) {
 
 
 
+function cargarSelectArea(opcion, id) {
+
+    form_actividad.area.html('').selectpicker('refresh');
+    var formulario = new FormData();
+    formulario.append(token_name, token_hash);
+    getAjaxFormData(formulario, base_url + 'actividad/getArea').then(function(result) {
+        result = JSON.parse(result);
+
+        if (opcion == 1) {
+
+            for (let c = 0; c < result.data.length; c++) {
+                form_actividad.area.append('<option value=' + result.data[c].ID_AREA + '>' + result.data[c].NOMBRE_AREA + '</option>');
+            }
+            form_actividad.area.selectpicker('refresh');
+
+            $("#modal-proyecto").modal("show");
+
+            $("#label-actividad").text("Elige el área asociada a la actividad. Podras agregar mas áreas asociadas al editar la actividad.");
+
+            $("#modal-proyecto").find(".modal-title").text("Nueva Actividad");
+            $("#modal-proyecto").find(".button-title").text("Agregar");
+
+
+        } else {
+
+            for (let c = 0; c < result.data.length; c++) {
+                //console.log(result[c]);
+                form_actividad.area.append('<option value=' + result.data[c].ID_AREA + '>' + result.data[c].NOMBRE_AREA + '</option>');
+            }
+            form_actividad.area.selectpicker('refresh');
+
+            $("#modal-proyecto").modal("show");
+            $("#label-actividad").text("Áreas asociadas a la Actividad:");
+
+            $("#modal-proyecto").find(".modal-title").text("Editar Actividad");
+            $("#modal-proyecto").find(".button-title").text("Editar");
+
+
+            let formulario = new FormData();
+            formulario.append(token_name, token_hash);
+            formulario.append('id', id);
+            getAjaxFormData(formulario, base_url + 'actividad/getArea').then(function(result) {
+                result = JSON.parse(result);
+                if (result.errores.length == 0) {
+                    result.data.map(function(ele, index) {
+                        form_actividad.area.selectpicker('refresh');
+
+                    });
+                }
+
+
+
+            });
+        }
+    });
+}
+
+function cargarTablaArea(id) {
+
+    limpiaModal2();
+
+    var table_head = $("#tabla-area-actividad thead")
+    head = "<tr><th>ID</th><th class='text-center'>NOMBRE ÁREA</th><th></th></tr>"
+    table_head.append(head)
+
+    let formulario = new FormData();
+    formulario.append(token_name, token_hash);
+    formulario.append('id', id);
+    getAjaxFormData(formulario, base_url + 'actividad/getArea').then(function(result) {
+        result = JSON.parse(result);
+        if (result.errores.length == 0) {
+            var table_body = $("#tabla-area-actividad tbody")
+                //console.log(result.data)
+            for (let c = 0; c < result.data.length; c++) {
+
+                markup = "<tr><td>" + result.data[c].ID_AREA + "</td><td>" + result.data[c].NOMBRE_AREA + "</td><td><i class='fas fa-trash-alt' style='cursor: pointer; color:red;' onclick='borrar_area_actividad(" + result.data[c].ID_ACTIVIDAD_AREA + ", " + id + ")'></i></td></tr>"
+                table_body.append(markup)
+            }
+        }
+    });
+
+
+}
 
 
 function borrar_area_actividad(id_actividad_area, id) {
@@ -258,6 +341,33 @@ function limpiaModal2() {
 
 
 
+function configurarDescargaExcel() {
+    $.fn.dataTable.Api.register('buttons.exportData()', function(options) {
+
+        if (this.context.length) {
+            //                console.log(this.context);
+            var varibles_post_excel = this.ajax.params();
+            var url_excel = this.ajax.url();
+            // _loading(true,"body","Exportando a excel... Espere por favor.");
+            $.extend(varibles_post_excel, { exportar: true });
+            var jsonResult = $.ajax({
+                url: url_excel,
+                data: varibles_post_excel,
+                type: "POST",
+                success: function(result) {
+                    //Do nothing
+                },
+                async: false
+            });
+            // _loading(false,"body");
+            jsonResult = $.parseJSON(jsonResult.responseText);
+            //                console.log(jsonResult.columns);
+            //console.log(jsonResult)
+            return { body: jsonResult.data, header: jsonResult.columns };
+        }
+    });
+}
+
 
 function mostrarModal(opcion, id = '') {
     if (opcion == 1) {
@@ -345,8 +455,8 @@ function cargarTabla(info) {
         ],
         "dom": '<"top"Bfrt> <"bottom" <"row" <"col-4" l><"col-4 text-center" i>  <"col-4" p>>>',
         "buttons": [{
-            "extend": '',
-            "text": '',
+            "extend": 'excel',
+            "text": '<i class="fa fa-file-excel-o"></i>&nbsp;&nbsp;Exportar a Excel',
 
         }]
     });

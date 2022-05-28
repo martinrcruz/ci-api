@@ -90,7 +90,7 @@ switch ($active) {
 
     <!-- Sample menu definition -->
     <ul id="main-menu" class="sm sm-blue">
-        <li><a href="#" class="border border-primary"><i class="fa fa-file pr-2" style="color: #7B6F93;" aria-hidden="true"></i> MODULO 1</a>
+        <li><a href="#" class="border border-primary"><i class="fa fa-file pr-2" style="color: #7B6F93;" aria-hidden="true"></i> COTIZACION</a>
         </li>
 
 

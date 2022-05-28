@@ -5,15 +5,16 @@
 
     <section class="content-header">
 
-        <h1 class="text-black">
+        <h1 class="text-white">
             Mantenedor
-            <small class="sub-info text-black">Gestión de Actividades</small>
+            <small class="sub-info text-white">Gestión de Actividades</small>
 
         </h1>
-        <!-- <ol class="breadcrumb">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?= base_url() ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+
             <li class="breadcrumb-item active"><a href="<?= base_url() ?>actividad">Actividades</a></li>
-        </ol> -->
+        </ol>
     </section>
 
     <!-- Main content -->
@@ -31,15 +32,8 @@
                                 <table id="tabla_actividad" class="table table-striped table-bordered base-style display table-responsive">
                                     <thead>
                                         <tr>
-                                            <th width="10%">ID</th>
-                                            <th width="10%">Nombre</th>
-                                            <th width="10%">Apellido</th>
-                                            <th width="10%">Rut</th>
-                                            <th width="10%">Edad</th>
-                                            <th width="10%">Sexo</th>
-                                            <th width="10%">Fecha Nacimiento</th>
-
-                                            <th width="10%">Opciones</th>
+                                            <th width="100%">Actividad</th>
+                                            <th width="20%">Opciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
