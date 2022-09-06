@@ -27,29 +27,75 @@
    }
 }
 
+.form-element .form-control {
+   border: 0.5px solid rgb(179, 179, 179);
+   border-radius: 15px;
+   background-position: center bottom, center calc(0% - 1px) !important;
+   padding: 0px 15px 0px 15px;
+}
 
+.custom-label {
+   padding: 0px 0px 10px 8px;
+}
+.fa {
+   padding-left:5px !important;
+}
+.fas {
+   padding-left:5px !important;
+}
 /* Espacios de selectores */
 
 .bootstrap-select li a span {
    letter-spacing: 0px;
 }
+hr {
+   color: #fc6a6d;
+}
+
+.title-g {
+   color: #fc6a6d;
+}
+select.selectpicker {
+   display: block !important;
+}
+
+.btn-filtrar{
+   background-color:#7B6F93;
+   padding: 7px 12px 7px 12px;
+   color: white;
+   border: none;
+   border-radius: 15px;
+}
+
+.close {
+   border: none;
+   border-radius: 10px;
+   padding: 5px 15px 5px 15px;
+   background-color: whitesmoke;
+   color: black;
+}
+
+.btn-agregar-g {
+   background-color: #2196f3;
+   color: white;
+}
+.btn-agregar-g:hover {
+   background-color: #359bee;
+   color: rgb(219, 219, 219);
+}
 
 
 /* Navbar, tablas */
-
 .dataTables_wrapper table thead,
 .dataTables_paginate span a.current,
 .dataTables_paginate span .paginate_button:hover,
 .main-nav ul li a.current,
 .main-nav ul li a:hover {
-   background-color: #34274b !important;
+   background-color: #585B6A !important;
    color: white;
-}
+   border-radius: 15px !important;
 
-.dataTables_length label {
-   color: #660cd5;
 }
-
 
 .dataTables_paginate span a.current,
 .main-nav ul li a.border,
@@ -210,7 +256,7 @@ button.btn_tipo_1:focus {
 
 
 .dataTables_length label {
-   color: #2196f3 !important;
+   color: #585B6A !important;
 }
 
 
@@ -274,4 +320,54 @@ button.btn_tipo_1:focus {
 
 .nav-link a {
    color: #ffffff !important;
+}
+
+.breadcrumb-g {
+   background-color: #f0f0f0;
+   width: 98%;
+   margin: 1%;
+   padding: 1% 2% 1% 2%;
+   border-radius: 8px;
+}
+.container-g{
+   background-color: #f0f0f0;
+   width: 98%;
+   margin: 1%;
+   padding: 1% 2% 1% 2%;
+   border-radius: 8px;
+}
+
+.start-header{
+   display:flex;
+   justify-content: start;;
+}
+.logo {
+   width: 10px;
+}
+.hour{
+   font-size: 45px;
+   font-weight: 600;
+   padding: 0px;
+   margin:0px;
+}
+.date {
+   font-size: 28px;
+   padding: 0px;
+   margin:-20px 0px 0px 0px;
+}
+.center-header{
+   display: flex;
+   justify-content: center;
+}
+.end-header{
+   display: flex;
+   justify-content: end;
+}
+
+.btn-info-g {
+   background-color: #0090e9de;
+   color:white;
+}
+.tabla-admin{
+   padding: 2%;
 }

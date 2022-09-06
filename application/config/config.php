@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = "http://localhost/codeigniter_template/ci_template/";
+$config['base_url'] = "http://localhost/graficag_v1/graficag_sistema/";
 
 /*
 |--------------------------------------------------------------------------

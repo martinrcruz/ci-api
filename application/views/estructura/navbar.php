@@ -28,31 +28,45 @@
 			<div class="inside-header">
 				<!-- Logo -->
 				<div class="row">
-					<div class="col-10">
+					<div class="col-4 start-header">
 
-						<div>
-							<span> <?php echo date('H:s') ?></span>
-							<span> <?php echo date('d-m-Y') ?></span>
+
+
+
+
+						<div class="container">
+
+							<div class="row">
+
+								<div class="col-2">
+									<img src=" <?= base_url() ?>/assets/images/logo-graficag.png" alt="" style="width:60px">
+								</div>
+
+								<div class="col-6">
+									<p class="hour"> <?php echo date('H:s') ?></p>
+									<p class="date"> <?php echo date('d-m-Y') ?></p>
+
+								</div>
+							</div>
 						</div>
+
+
+
+
 
 					</div>
 
 
 
+					<div class="col-4 center-header">
 
+						<div>
+							<h1>Hola, <strong>Usuario</strong></h1>
+						</div>
 
+					</div>
 
-
-
-
-
-
-
-
-
-
-					<div class="col-2">
-
+					<div class="col-4 end-header">
 						<nav class="navbar navbar-static-top">
 							<div class="navbar-custom-menu r-side">
 								<ul class="nav navbar-nav">
@@ -64,15 +78,19 @@
 									</li>
 									<!-- User Account-->
 									<li class="dropdown user user-menu">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="User">
-											<!-- <img src="<?= base_url() ?>assets/images/fotoperfiles/ " class="float-left rounded-circle" alt="User Image">					   -->
-											<img src="" class="float-left rounded-circle" alt="User Image">
-										</a>
-										<ul class="dropdown-menu animated flipInX">
+	
+
+
+										<button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="height: 36px; width: 36px; border:none; background-color:transparent; margin-top:13px;">
+										<img src="<?= base_url() ?>/assets/images/profile-img.png" class="float-left rounded-circle" alt="User Image">
+									</button>
+
+
+										<ul class="dropdown-menu">
 											<!-- User image -->
 											<li class="user-header bg-img" data-overlay="3">
 												<div class="flexbox align-self-center">
-													<img src="" class="float-left rounded-circle" alt="User Image">
+													<img src="<?= base_url() ?>/assets/images/profile-img.png" class="float-left rounded-circle" alt="User Image">
 													<h4 class="user-name align-self-center">
 														<span>Nombre usuario</span>
 														<br>
@@ -89,8 +107,8 @@
 												<a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-settings"></i> Account Setting</a>
 												<div class="dropdown-divider"></div>
 												<a class="dropdown-item manito" onclick="signOut();"><i class="ion-log-out"></i> Cerrar Sesión</a>
-												<!--						<div class="dropdown-divider"></div>
-						<div class="p-10"><a href="javascript:void(0)" class="btn btn-sm btn-rounded btn-success">View Profile</a></div>-->
+												<!-- <div class="dropdown-divider"></div> -->
+												<!-- <div class="p-10"><a href="javascript:void(0)" class="btn btn-sm btn-rounded btn-success">View Profile</a></div>-->
 											</li>
 										</ul>
 									</li>

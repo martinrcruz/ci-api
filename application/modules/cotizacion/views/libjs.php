@@ -1,4 +1,4 @@
-<script src="<?= base_url() ?>assets/libraries/datatable/datatables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 <script src="<?= base_url() ?>assets/style/vendor_components/fullcalendar-5.3.2/lib/main.js"></script>
 <script src="<?= base_url() ?>assets/style/vendor_components/fullcalendar-5.3.2/lib/locales/es.js"></script>
@@ -16,5 +16,5 @@
 <script src="<?= base_url() ?>assets/js/bootstrap-datetimepicker.min.js"></script>
 <script src="<?= base_url() ?>assets/libraries/sweetalert/sweetalert.min.js"></script>
 
-<script src="<?= base_url() ?>assets/js/modules/actividad/actividad.js"></script>
+<script src="<?= base_url() ?>assets/js/modules/cotizacion/cotizacion.js"></script>
 <script src="<?= base_url() ?>assets/js/utilidades.js" type="text/javascript"></script>

@@ -1,0 +1,39 @@
+.media {
+    padding: 10px 0px !important;
+    transition: background-color .2s linear;
+}
+
+tbody tr td:nth-child(1) .media a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tbody tr td:last-child {
+    text-align: center;
+}
+
+@media only screen and (min-width: 1900px) {
+    table.dataTable {
+        display: table;
+    }
+}
+
+hr {
+    color: #fc6a6d;
+}
+
+.title-g {
+    color: #fc6a6d;
+}
+
+
+select.selectpicker {
+    display: block !important;
+}
+.btn-filtrar{
+    background-color:#7B6F93;
+    padding: 7px 12px 7px 12px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}

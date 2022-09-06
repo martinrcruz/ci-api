@@ -3,11 +3,11 @@
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
             
             <li class="nav-item">
-                Creado por Impact
+                Creado por AM Solutions
             </li>
         </ul>
     </div>
-    &copy; 2021 IMPACT
+    &copy; 2022 GRAFICA G
 </footer>
 
 
@@ -43,7 +43,7 @@
 
 
 <!-- Bootstrap 4.0-->
-<script src="<?= base_url() ?>assets/style/vendor_components/bootstrap/dist/js/bootstrap.js"></script>	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <!-- Slimscroll -->
 <script src="<?= base_url() ?>assets/style/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>

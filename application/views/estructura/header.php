@@ -15,7 +15,7 @@
     <h1><?php base_url() ?></h1>
 
     <!-- Bootstrap 4.0-->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/style/vendor_components/bootstrap/dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- theme style -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/style/css/horizontal-menu.css">
@@ -45,8 +45,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/all.css">
 
+    <script src="https://kit.fontawesome.com/e387528569.js" crossorigin="anonymous"></script>
 
 
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/custom.css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

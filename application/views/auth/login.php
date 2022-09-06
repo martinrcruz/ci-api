@@ -6,26 +6,31 @@
     <div class="col-1">
     </div>
     <div class="col-lg-2 pt-5 mt-5 pb-5 mb-5 text-center">
-      <br><br><br>
+      <br><br>
+      <img src=" <?= base_url() ?>/assets/images/logo-graficag.png" alt="">
       <h1 class="text-center" style="font-weight:700; font-size:16px;"><?php echo lang('login_heading'); ?></h1>
 
       <div id="infoMessage"><?php echo $message; ?></div>
 
-      <?php echo form_open("auth/login"); ?>
+      <?php echo form_open("auth/login"); ?><br>
+
+
+
+
 
       <p>
-        <?php echo lang('login_identity_label', 'identity'); ?>
+        Email/Usuario<br>
         <?php echo form_input($identity); ?>
       </p>
 
       <p>
-        <?php echo lang('login_password_label', 'password'); ?>
+        Contraseña<br>
         <?php echo form_input($password); ?>
       </p>
 
       <p>
         <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"'); ?>
-        <?php echo lang('login_remember_label', 'remember'); ?>
+        Recordarme
       </p>
 
 
@@ -38,7 +43,7 @@
     <div class="col-1">
     </div>
 
-    <div class="col-lg-8" style="background-image: url('<?= base_url() ?>assets/images/login-background.jpg'); background-size: cover; height: 100vh; overflow: auto;">
+    <div class="col-lg-8" style="background-image: url('<?= base_url() ?>assets/images/login-background-1.jpg'); background-size: cover; height: 100vh; overflow: auto;">
     </div>
   </div>
 </div>
