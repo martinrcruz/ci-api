@@ -30,7 +30,6 @@ class Orden_trabajo extends CI_Controller
             foreach ($res->result() as $r) {
                 $row = new stdClass();
                 $id_orden_trabajo = $r->LAST_ID;
-
             }
             $response->proceso = 1;
         }
@@ -85,6 +84,65 @@ class Orden_trabajo extends CI_Controller
         }
     }
 
+    public function getOrdenTrabajoDataFiltro()
+    {
+        if (true) {
+            //DECLARACION DE VARIABLES, OBJETOS Y ARRAYS DE [PETICION]
+            $request = new stdClass();
+            $request->id = null;
+            $request->data = [];
+            $where = "";
+            $fecha = date('Y-m-d H:i:s');
+
+            //DECLARACION DE VARIABLES, OBJETOS Y ARRAYS DE [RESPUESTA]
+            $response = new stdClass();
+            $response->id = null;
+            $response->data = [];
+            $response->proceso = 0;
+            $response->errores = [];
+
+
+
+            if($this->input->post('fecha_inicio') && $this->input->post('fecha_fin')){
+              $fecha_inicio = trim($this->security->xss_clean($this->input->post('fecha_inicio', true)));
+              $fecha_fin = trim($this->security->xss_clean($this->input->post('fecha_fin', true)));
+              $fecha_inicio ? $where .= " AND ot.fecha_creacion BETWEEN '$fecha_inicio' AND '$fecha_fin' " : $where .= '';
+
+            } else if ($this->input->post('fecha_inicio') ) {
+                $fecha_inicio = trim($this->security->xss_clean($this->input->post('fecha_inicio', true)));
+                $fecha_inicio ? $where .= " AND ot.fecha_creacion >= '$fecha_inicio' " : $where .= '';
+
+            } else if ($this->input->post('fecha_fin')) {
+                $fecha_fin = trim($this->security->xss_clean($this->input->post('fecha_fin', true)));
+                $fecha_fin ? $where .= " AND ot.fecha_creacion <= '$fecha_fin' " : $where .= '';
+
+            }
+
+            if ($this->input->post('id_tipo_impuesto')) {
+                $id_tipo_impuesto = trim($this->security->xss_clean($this->input->post('id_tipo_impuesto', true)));
+
+                $id_tipo_impuesto ? $where .= " AND ot.id_tipo_impuesto=$id_tipo_impuesto" : $where .= '';
+            }
+
+
+            if ($query = $this->orden_trabajo_model->getOrdenTrabajoDataFiltro($where)) {
+                foreach ($query->result() as $res) {
+                    $row = null;
+                    $row = new stdClass();
+                    $row->id_orden_trabajo = $res->ID_ORDEN_TRABAJO;
+                    $row->total_neto = $res->TOTAL_NETO;
+                    $row->total_iva = $res->TOTAL_IVA;
+                    $row->total = $res->TOTAL;
+
+                    array_push($response->data, $row);
+                }
+            }
+            echo json_encode($response);
+        } else {
+            redirect('auth/login', 'refresh');
+        }
+    }
+
     public function getOrdenTrabajoTabla()
     {
         if (true) {
@@ -103,19 +161,16 @@ class Orden_trabajo extends CI_Controller
             $response->proceso = 0;
             $response->errores = [];
 
-            if($this->input->post('fecha_inicio') && $this->input->post('fecha_fin')){
-              $fecha_inicio = trim($this->security->xss_clean($this->input->post('fecha_inicio', true)));
-              $fecha_fin = trim($this->security->xss_clean($this->input->post('fecha_fin', true)));
-              $fecha_inicio ? $where .= " AND ot.fecha_creacion BETWEEN '$fecha_inicio' AND '$fecha_fin' " : $where .= '';
-
-            } else if ($this->input->post('fecha_inicio') ) {
+            if ($this->input->post('fecha_inicio') && $this->input->post('fecha_fin')) {
+                $fecha_inicio = trim($this->security->xss_clean($this->input->post('fecha_inicio', true)));
+                $fecha_fin = trim($this->security->xss_clean($this->input->post('fecha_fin', true)));
+                $fecha_inicio ? $where .= " AND ot.fecha_creacion BETWEEN '$fecha_inicio' AND '$fecha_fin' " : $where .= '';
+            } else if ($this->input->post('fecha_inicio')) {
                 $fecha_inicio = trim($this->security->xss_clean($this->input->post('fecha_inicio', true)));
                 $fecha_inicio ? $where .= " AND ot.fecha_creacion >= '$fecha_inicio' " : $where .= '';
-
             } else if ($this->input->post('fecha_fin')) {
                 $fecha_fin = trim($this->security->xss_clean($this->input->post('fecha_fin', true)));
                 $fecha_fin ? $where .= " AND ot.fecha_creacion <= '$fecha_fin' " : $where .= '';
-
             }
 
             if ($this->input->post('id_tipo_impuesto')) {
@@ -149,7 +204,9 @@ class Orden_trabajo extends CI_Controller
                     $row->total_neto = $res->TOTAL_NETO;
                     $row->total_iva = $res->TOTAL_IVA;
                     $row->total = $res->TOTAL;
-                    $row->deuda = 0;
+                    // $row->deuda = $res->deuda;
+                    // $row->abono = $res->abono;
+
                     $row->fecha_ultima_ot = $res->FECHA_ORDEN_TRABAJO;
                     $row->id_ot = 1;
 
@@ -186,13 +243,13 @@ class Orden_trabajo extends CI_Controller
             //DECLARACION DE VARIABLES DE FILTRO PARA QUERY
             $where = '';
 
-            if (is_numeric($this->input->post('id_orden_trabajo'))) {
+            if ($this->input->post('id_orden_trabajo')) {
                 $request->id = trim($this->security->xss_clean($this->input->post('id_orden_trabajo', true)));
             } else { //SI NO, ALMACENAMOS EL ERROR EN UN ARRAY PARA DEVOLVERLO COMO RESPUESTA.
                 $response->errores[] = "Ocurrió un problema al obtener la solicitud";
             }
 
-            $request->id ? $where = " AND id_orden_trabajo=$request->id" : $where = '';
+            $request->id ? $where = " AND ot.id_orden_trabajo=$request->id" : $where = '';
 
 
             if (sizeof($response->errores) == 0) {
@@ -205,9 +262,13 @@ class Orden_trabajo extends CI_Controller
                         $row->fecha_orden_trabajo = $res->FECHA_ORDEN_TRABAJO;
                         $row->observacion = $res->OBSERVACION;
                         $row->id_tipo_impuesto = $res->ID_TIPO_IMPUESTO;
+                        $row->tipo_impuesto = $res->tipo_impuesto;
                         $row->id_tiempo_entrega = $res->ID_TIEMPO_ENTREGA;
                         $row->tiempo_entrega = $res->tiempo_entrega;
+                        $row->descripcion_tiempo_entrega = $res->descripcion_tiempo_entrega;
                         $row->id_forma_pago = $res->ID_FORMA_PAGO;
+                        $row->forma_pago = $res->forma_pago;
+                        $row->descripcion_forma_pago = $res->descripcion_forma_pago;
                         $row->descuento = $res->DESCUENTO;
                         $row->enviado_correo = $res->ENVIADO_CORREO;
                         $row->total_neto = $res->TOTAL_NETO;
@@ -380,8 +441,8 @@ class Orden_trabajo extends CI_Controller
                     $request->observacion = $this->security->xss_clean($this->input->post('observacion'));
                 }
 
-                if (!empty($this->input->post('tiempo_entrega'))) {
-                    $request->tiempo_entrega = $this->security->xss_clean($this->input->post('tiempo_entrega'));
+                if (!empty($this->input->post('id_tiempo_entrega'))) {
+                    $request->tiempo_entrega = $this->security->xss_clean($this->input->post('id_tiempo_entrega'));
                 }
 
                 if (!empty($this->input->post('id_pago_orden_trabajo'))) {
@@ -396,6 +457,8 @@ class Orden_trabajo extends CI_Controller
 
                 if (!empty($this->input->post('descuento'))) {
                     $request->descuento = $this->security->xss_clean($this->input->post('descuento'));
+                } else {
+                    $request->descuento = "0";
                 }
 
                 if (!empty($this->input->post('enviado_correo'))) {
@@ -408,14 +471,12 @@ class Orden_trabajo extends CI_Controller
 
                 if (!empty($this->input->post('total_iva'))) {
                     $request->total_iva = $this->security->xss_clean($this->input->post('total_iva'));
+                } else {
+                    $request->total_iva = "0";
                 }
 
                 if (!empty($this->input->post('total'))) {
                     $request->total = $this->security->xss_clean($this->input->post('total'));
-                }
-
-                if (!empty($this->input->post('fecha_orden_trabajo'))) {
-                    $request->fecha_orden_trabajo = $this->security->xss_clean($this->input->post('fecha_orden_trabajo'));
                 }
 
                 if (!empty($this->input->post('estado'))) {
@@ -428,7 +489,7 @@ class Orden_trabajo extends CI_Controller
                     'id_cliente' => $request->id_cliente,
                     'id_usuario' => $request->id_usuario,
                     'observacion' => $request->observacion,
-                    'tiempo_entrega' => $request->tiempo_entrega,
+                    'id_tiempo_entrega' => $request->tiempo_entrega,
                     'id_pago_orden_trabajo' => $request->id_pago_orden_trabajo,
                     'id_tipo_impuesto' => $request->id_tipo_impuesto,
                     'descuento' => $request->descuento,
@@ -436,7 +497,7 @@ class Orden_trabajo extends CI_Controller
                     'total_neto' => $request->total_neto,
                     'total_iva' => $request->total_iva,
                     'total' => $request->total,
-                    'fecha_orden_trabajo' => $request->fecha_orden_trabajo,
+                    'fecha_orden_trabajo' => $fecha,
                     'fecha_modificacion' => $fecha,
                     'estado' => 1
                 );

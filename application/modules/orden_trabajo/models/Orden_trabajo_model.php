@@ -11,12 +11,17 @@ class Orden_trabajo_model extends CI_Model
     {
         $sql = "SELECT *,
         te.nombre as tiempo_entrega,
-        ti.nombre as tipo_impuesto
+        te.descripcion as descripcion_tiempo_entrega,
+        ti.nombre as tipo_impuesto,
+        fp.nombre as forma_pago,
+        fp.descripcion as descripcion_forma_pago
+
         FROM orden_trabajo ot
         JOIN  tiempo_entrega te ON ot.ID_TIEMPO_ENTREGA=te.ID_TIEMPO_ENTREGA
         JOIN tipo_impuesto ti ON ot.ID_TIPO_IMPUESTO=ti.ID_TIPO_IMPUESTO
+        JOIN forma_pago fp ON fp.ID_FORMA_PAGO=ot.ID_FORMA_PAGO
         WHERE ot.ESTADO=1 $where
-        ORDER BY id_orden_trabajo DESC;";
+        ORDER BY ot.id_orden_trabajo DESC;";
         $query = $this->db->query($sql);
         // var_dump($this->db->last_query());
 
@@ -25,6 +30,7 @@ class Orden_trabajo_model extends CI_Model
         else
             return false;
     }
+
 
     public function getOrdenTrabajoTabla($where = '')
     {
@@ -47,7 +53,6 @@ class Orden_trabajo_model extends CI_Model
         ot.TOTAL as TOTAL,
         ot.id_tiempo_entrega as ID_TIEMPO_ENTREGA,
         te.nombre as TIEMPO_ENTREGA
-
         FROM orden_trabajo ot
         LEFT JOIN tiempo_entrega te ON ot.ID_TIEMPO_ENTREGA=te.ID_TIEMPO_ENTREGA
         LEFT JOIN tipo_impuesto ti ON ot.ID_TIPO_IMPUESTO=ti.ID_TIPO_IMPUESTO
@@ -70,6 +75,7 @@ class Orden_trabajo_model extends CI_Model
     public function getOrdenTrabajoDataFiltro($where = '')
     {
         $sql = "SELECT
+        ot.ID_ORDEN_TRABAJO,
         SUM(ot.TOTAL_NETO) as TOTAL_NETO,
         SUM(ot.TOTAL_IVA) as TOTAL_IVA,
         SUM(ot.TOTAL) as TOTAL
@@ -153,7 +159,7 @@ class Orden_trabajo_model extends CI_Model
         else
             return false;
     }
-    
+
     public function updateOrdenTrabajo($tabla, $comparar, $datos, $id)
     {
         $this->db->where($comparar, $id);
@@ -163,5 +169,4 @@ class Orden_trabajo_model extends CI_Model
         else
             return false;
     }
-
 }
